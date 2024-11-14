@@ -1,11 +1,25 @@
-import { StyleSheet, Text, View, FlatList,Animated,PanResponder,TouchableOpacity, Dimensions } from 'react-native';
-import React, { useMemo, useRef,useState } from 'react';
+import { StyleSheet, Text, View, FlatList,Animated,PanResponder,TouchableOpacity, Dimensions,Button } from 'react-native';
+import React, { useEffect, useMemo, useRef,useState } from 'react';
 import { Black, White } from '../../utils/Color';
 import Icon from 'react-native-vector-icons/Ionicons';
+import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const transactions = [
   {
-    title: 'Oct 15,2024',
+    title: 'Oct 24, 2024',
+    price: '£0.53',
+    items: [
+      {
+        id: '1',
+        description: 'Jagjit Sing',
+        amount: '-£1.',
+        neachy: '00',
+        card: 'friend',
+      },
+    ],
+  },
+  {
+    title: 'Oct 15, 2024',
     price: '£1.53',
     items: [
       {
@@ -18,7 +32,7 @@ const transactions = [
     ],
   },
   {
-    title: 'Oct 03,2024',
+    title: 'Oct 03, 2024',
     price: '£3.53',
     items: [
       {
@@ -63,7 +77,7 @@ const transactions = [
         card: 'RBS02104KIP9J4JK',
       },
     ],
-  },
+  },  
   {
     title: 'JUL 24, 2024',
     price: '£0.00',
@@ -77,10 +91,16 @@ const transactions = [
       },
     ],
   },
+  
 ];
 const height = Dimensions.get('screen').height
 const BankAccount = ({navigation}) => {
+  useEffect(() => {
+    // RBSheet ko automatically open karne ke liye
+    refRBSheet.current.open();
+  }, []);
   const panY = useRef(new Animated.Value(300)).current; // Initial position set to 300 (partially visible)
+  const refRBSheet = useRef();
 
 const panResponder = useRef(
   PanResponder.create({
@@ -113,7 +133,15 @@ const panResponder = useRef(
     },
   })
 ).current;
-  
+const [sheetHeight, setSheetHeight] = useState(Dimensions.get('screen').height / 1.2);
+
+const onSheetDrag = (value) => {
+  if (value === 'expand') {
+    setSheetHeight(Dimensions.get('screen').height); 
+  } else if (value === 'collapse') {
+    setSheetHeight(Dimensions.get('screen').height / 1); 
+  }
+};
   const renderSection = ({ item, index }) => (
     <View style={styles.section}>
       <View
@@ -158,7 +186,7 @@ const panResponder = useRef(
     </View>
   );
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#D3D3D3' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#CDD4D5' }}>
       <View
         style={{
           height: 80,
@@ -173,7 +201,7 @@ const panResponder = useRef(
           </TouchableOpacity>
           <View style={{ justifyContent: 'center', marginHorizontal: 10 }}>
             <Text style={{ color: Black, fontSize: 16,fontWeight:'500' }}>BANK ACCOUNT</Text>
-            <Text style={{ color: Black,fontWeight:'500' }}>£1.53</Text>
+            <Text style={{ color: Black,fontWeight:'500' }}>£0.53</Text>
           </View>
         </View>
         <View
@@ -187,9 +215,9 @@ const panResponder = useRef(
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£1.52</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£0.53</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
-          Arranged overdraft 0.00£
+          Arranged overdraft : £0.00
         </Text>
       </View>
       <View
@@ -295,34 +323,65 @@ const panResponder = useRef(
           </View>
         </View>
       </View>
-      {/* <View style={{backgroundColor:White}}> */}
-      <Animated.View
-  style={[
-    styles.bottomSheet,
-    {
-      transform: [{ translateY: panY }],
-      opacity: panY.interpolate({
-        inputRange: [0, 250],
-        outputRange: [1, 0.5],
-        extrapolate: 'clamp',
-      }),
-    },
-  ]}
-  {...panResponder.panHandlers} // PanResponder ko bottom sheet ke sath associate karna
->
-  <View style={styles.handle} />
-  <View style={{ flexDirection: 'row', marginVertical: 5, justifyContent: 'space-between', marginHorizontal: 10 }}>
-    <Text style={{ color: Black, fontSize: 16, fontWeight: '800' }}>Transaction</Text>
-    <Icon name="search-outline" size={20} color={Black} />
-  </View>
+      <View style={{height:100,marginVertical:20,marginHorizontal:10, justifyContent:'center'}}>
+   <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
+    <Text style={{color:Black}}>Available balance</Text>
+    <Text style={{color:Black}}>£0.53</Text>
 
+   </View>
+   <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
+    <Text style={{color:Black}}>Balance at</Text>
+    <Text style={{color:Black}}>16:03 GMT on 21 Oct</Text>
+
+   </View>
+   <View style={{flexDirection:'row',justifyContent:'space-between',}}>
+    <Text style={{color:'#CDD4D5'}}>Available balance</Text>
+    <Text style={{color:Black}}>2024</Text>
+
+   </View>
+   </View>
+   <RBSheet
+  ref={refRBSheet}
+  closeOnPressMask={true}
+  openDuration={390}
+  closeOnDragDown={true}
+  closeOnPressBack={false}
+  draggable={true}
+  height={390} // specify the height
+  minClosingHeight={0} // set it to 0 for full closure
+  dragFromTopOnly={false}
+  customStyles={{
+    wrapper: {
+      backgroundColor: 'transparent',
+    },
+    draggableIcon: {
+      backgroundColor: 'grey',
+      width: 80,
+      alignSelf: 'center',
+    },
+    container: {
+      height: 390, // match this height
+    },
+  }}
+  onDragEnd={() => {
+    // Ensure the sheet doesn't go above the top
+    if (refRBSheet.current.getCurrentPosition() < 0) {
+      refRBSheet.current.setState({ height: 190 });
+    }
+  }}
+>
+  <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:10}}>
+    <Text style={{color:'black', fontWeight:'800', fontSize:18}}>Transactions</Text>
+    <Icon name='search' color={'black'} size={22}/>
+  </View>
   <FlatList
     data={transactions}
     renderItem={renderSection}
     keyExtractor={(item, index) => index.toString()}
-    contentContainerStyle={{ backgroundColor: White }}
+    contentContainerStyle={{ backgroundColor: 'white' }}
   />
-        </Animated.View>
+</RBSheet>
+
       
     
      

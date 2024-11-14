@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, Text, View,FlatList, TouchableOpacity } from 'react-native'
+import { StatusBar, StyleSheet, Text, View,FlatList, TouchableOpacity, Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Black, White } from '../../utils/Color'
 import React, { useState } from 'react';
@@ -6,35 +6,32 @@ import Icon from 'react-native-vector-icons/MaterialIcons'; // For the circular 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'; // For the circular radio icon
 
 
-const accounts = [
-,
-];
-const From = ({navigation}) => {
+
+const From = ({navigation}:any) => {
     const [selectedAccount, setSelectedAccount] = useState(null);
 
-    const handleSelectAccount = (id,item) => {
+    // const handleSelectAccount = (id,item) => {
       
-      setSelectedAccount(id);
-    console.log("-------",item);
-    navigation.navigate('To', { item: "dssds" });
-    };
+    //   setSelectedAccount(id);
+    // navigation.navigate('To', { item: "dssds" });
+    // };
   
-    const renderAccountItem = ({ item }) => (
-      <TouchableOpacity style={styles.accountItem} onPress={() => handleSelectAccount(item.id,item)}>
-        <View>
-          <Text style={styles.accountName}>{item.name}</Text>
-          <Text style={styles.accountNumber}>{item.number}</Text>
-        </View>
-        <View style={styles.accountBalanceContainer}>
-          <Text style={styles.accountBalance}>{item.balance}</Text>
-          <Icon
-            name={selectedAccount === item.id ? 'radio-button-checked' : 'radio-button-unchecked'}
-            size={24}
-            color="#000"
-          />
-        </View>
-      </TouchableOpacity>
-    );
+    // const renderAccountItem = ({ item }) => (
+    //   <TouchableOpacity style={styles.accountItem} onPress={() => handleSelectAccount(item.id,item)}>
+    //     <View>
+    //       <Text style={styles.accountName}>{item.name}</Text>
+    //       <Text style={styles.accountNumber}>{item.number}</Text>
+    //     </View>
+    //     <View style={styles.accountBalanceContainer}>
+    //       <Text style={styles.accountBalance}>{item.balance}</Text>
+    //       <Icon
+    //         name={selectedAccount === item.id ? 'radio-button-checked' : 'radio-button-unchecked'}
+    //         size={24}
+    //         color="#000"
+    //       />
+    //     </View>
+    //   </TouchableOpacity>
+    // );
   
   return (
     <SafeAreaView style={{backgroundColor:White,flex:1}}>
@@ -61,8 +58,19 @@ elevation: 5,backgroundColor:White,justifyContent:'space-between',alignItems:'ce
     <MaterialCommunityIcons  name='dots-vertical' color={Black} size={20}/>
     </View>
     </View>
-   
-    <TouchableOpacity 
+   <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+<View style={{height:80,width:'50%'}}>
+<Image source={require("../../assets/images/b3ff7b19-7802-4e69-80e3-fc132448dc9e.png")} resizeMode='contain' style={{height:'100%',width:"100%"}}/>
+</View>
+<Text style={{color:Black,fontSize:14,width:'80%',marginTop:20,textAlign:'center',fontWeight:'600'}}>
+  We're unable to process this request as 
+either you don't hold an eligible account or 
+the personal details we hold for you are notbr 
+up to date. Please chat to us in the support 
+              tab.CDDINH1
+</Text>
+   </View>
+    {/* <TouchableOpacity 
     onPress={()=>navigation.navigate('To')}
     style={styles.accountItem} >
         <View>
@@ -91,7 +99,7 @@ elevation: 5,backgroundColor:White,justifyContent:'space-between',alignItems:'ce
             color="#000"
           />
         </View>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </SafeAreaView>
   )
 }

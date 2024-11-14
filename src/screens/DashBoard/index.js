@@ -152,7 +152,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £1.53
+          £0.53
         </Text>
       </View>
       </TouchableOpacity>

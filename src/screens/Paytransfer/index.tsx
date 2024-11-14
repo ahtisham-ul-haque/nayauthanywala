@@ -27,15 +27,9 @@ const DATA = [{
     tittle:'SL'
 },
 ]
-const Paytransfer = ({navigation}) => {
+const Paytransfer = ({navigation}:any) => {
 
-    
-      // Update current index when scrolling
-      const onScroll = (event) => {
-        const newIndex = Math.round(event.nativeEvent.contentOffset.x / 100);
-        setScrollX(event.nativeEvent.contentOffset.x);
-        setCurrentIndex(newIndex);
-      };
+   
   return (
     <SafeAreaView style={styles.main}>
         <ScrollView>
@@ -84,9 +78,11 @@ const Paytransfer = ({navigation}) => {
 <FlatList
   data={DATA}
   horizontal
+  showsHorizontalScrollIndicator={false}
   renderItem={({ item }) => {
     return (
-        <View>
+        <TouchableOpacity
+        onPress={()=>navigation.navigate("Froms")}>
       <View style={{height:60,width:60,margin:18,borderRadius:45,marginVertical:10,backgroundColor:LightGrey,alignItems:"center",justifyContent:"center"}}>
         <Text style={{color:Black,fontSize:20,}}>{item?.tittle}</Text>
       </View>
@@ -95,7 +91,7 @@ const Paytransfer = ({navigation}) => {
           {item?.name} {/* Or whatever text you want here */}
         </Text>
         </View>
-        </View>
+        </TouchableOpacity>
     );
   }}
 />
@@ -269,7 +265,6 @@ const styles = StyleSheet.create({
         margin:15,
     },
     check:{
-        height:240,
         backgroundColor:White,
     },
 })
