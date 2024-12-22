@@ -39,10 +39,10 @@ function MyTabs() {
               iconName = 'cog-outline';
               break;
             case 'Plan':
-              iconName = 'library-outline';
+              iconName = 'stats-chart-outline';
               break;
             case 'Support':
-              iconName = 'people-circle-outline';
+              iconName = 'chatbox-ellipses-outline';
               break;
             default:
               iconName = 'alert-circle';
@@ -116,7 +116,7 @@ const MainNavigation = () => {
           options={{ headerShown: false }}
         />
          <Stack.Screen
-          name="From"
+          name="Froms"
           component={From}
           options={{ headerShown: false }}
         />

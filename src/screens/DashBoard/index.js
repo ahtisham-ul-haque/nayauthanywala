@@ -138,11 +138,11 @@ const DashBoard = ({navigation}) => {
           borderBottomWidth: 0.5,
       
         }}>
-        <Text style={{ color: '#181818', fontSize: 16 }}>BANK ACCOUNT</Text>
+        <Text style={{ color: '#181818', fontSize: 16 }}>BANK A/C </Text>
         <View style={{ flexDirection: 'row' }}>
           <Text style={{ color: '#989898', fontSize: 16 }}>40-12-62</Text>
           <Text style={{ color: '#989898', fontSize: 16, paddingLeft: 7 }}>
-            53812510
+          54731875
           </Text>
         </View>
         <Text
@@ -152,7 +152,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £0.53
+          £49.30
         </Text>
       </View>
       </TouchableOpacity>

@@ -73,7 +73,14 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
-
+configurations.all {
+        resolutionStrategy {
+            force 'com.google.android.gms:play-services-gcm:16.1.0'
+            force 'com.google.android.gms:play-services-base:16.1.0'
+            force 'com.google.firebase:firebase-core:16.0.9'
+            force 'com.google.firebase:firebase-messaging:18.0.0'
+    }
+}
     namespace "com.myapp"
     defaultConfig {
         applicationId "com.myapp"
