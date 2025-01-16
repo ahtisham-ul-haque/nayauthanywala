@@ -6,323 +6,370 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const transactions = [
   {
-    title: 'Dec 18, 2024',
-    price: '£49.30',
+    title: 'Jan 13, 2025',
+    price: '£6.22',
     items: [
       {
         id: '1',
-        description: 'GARDEN KEBAB',
-        amount: '-£10.',
-        neachy: '00',
-        card: 'ENFIELD',
-      },
-      {
-        id: '1',
-        description: 'ENFIELD FOOD CENTER',
-        amount: '-£9.',
-        neachy: '60',
-        card: 'ENFIELD',
-      },
-      {
-        id: '1',
-        description: 'SUMUP *MISHA TRAD',
-        amount: '-£38.',
-        neachy: '00',
-        card: 'ILFORD',
-      },
-    ],
-  },
-  {
-    title: 'Dec 17, 2024',
-    price: '£106.90',
-    items: [
-      {
-        id: '1',
-        description: 'CASH NOTEMAC DEC17',
-        amount: '-£50.',
-        neachy: '00',
-        card: 'Notemachine @21:47',
-      },
-      {
-        id: '1',
-        description: 'CASH NOTEMAC DEC17',
-        amount: '-£250.',
-        neachy: '00',
-        card: 'Notemachine @21:47',
-      },
-      {
-        id: '1',
-        description: 'SANIYA MIRZA ',
-        amount: '£100.',
-        neachy: '00',
-        card: 'PAYMENT',
-        GREEN:true
-      },
-      {
-        id: '1',
-        description: 'HUTTE SUPERMARKET ',
-        amount: '-£33.',
-        neachy: '80',
-        card: 'ILFORD IG1',
-      },
-      {
-        id: '1',
-        description: 'COLONY RESTAURANT',
-        amount: '-£13.',
-        neachy: '30',
-        card: 'ILFORD',
-      },
-      {
-        id: '1',
-        description: 'CASH BNKM DEC16',
-        amount: '-£50.',
-        neachy: '00',
-        card: 'MFG-LOXFOR@23:54',
-      },
-      {
-        id: '1',
-        description: 'CASH BNKM DEC16',
-        amount: '-£250.',
-        neachy: '00',
-        card: 'MFG-LOXFOR@23:53',
-      },
-    ],
-  },
-  {
-    title: 'Dec 16, 2024',
-    price: '£754.00',
-    items: [
-      {
-        id: '1',
-        description: 'MIRZA S',
-        amount: '£750.',
-        neachy: '00',
-        card: 'PAYMENT',
-        GREEN:true
-      },
-    ],
-  },
-  {
-    title: 'Dec 13, 2024',
-    price: '£4.00',
-    items: [
-      {
-        id: '1',
-        description: 'NISA LOCAL',
-        amount: '-£41.',
-        neachy: '19',
-        card: 'LONDON',
-      },
-    ],
-  },
-  {
-    title: 'Dec 12, 2024',
-    price: '£45.19',
-    items: [
-      {
-        id: '1',
-        description: 'Saniya Mirza',
+        description: 'SWIFT AUTO GARAGE',
         amount: '-£60.',
         neachy: '00',
-        card: 'PAYMENT',
+        card: 'Harrow',
       },
+   
       {
         id: '1',
-        description: 'Saniya Mirza',
-        amount: '-£2,600.',
+        description: 'SWIFT AUTO GARAGE',
+        amount: '-£60.',
         neachy: '00',
-        card: 'PAYMENT',
+        card: 'Harrow',
       },
     ],
   },
   {
-    title: 'Dec 11, 2024',
-    price: '£2,705.19',
+    title: 'Jan 11, 2025',
+    price: '£121.22',
     items: [
       {
         id: '1',
-        description: 'CASH RB SCOT DEC11',
-        amount: '-£50.',
+        description: 'Gaurav Saini',
+        amount: '-£7.',
         neachy: '00',
-        card: 'TESCO LRV DO@21:43',
+        card: 'pisp1371517765',
       },
+   
       {
         id: '1',
-        description: 'CASH RB SCOT DEC11',
-        amount: '-£250.',
+        description: 'Gaurav Saini',
+        amount: '£7.',
         neachy: '00',
-        card: 'TESCO LRV DO@21:42',
-      },
-      {
-        id: '1',
-        description: '2024121100166838',
-        amount: '-£5.',
-        neachy: '00',
-        card: 'RBS11124H9VP1KG0',
-      },
-      {
-        id: '1',
-        description: 'ADVICE CONFIRMS',
-        amount: '£2,998.',
-        neachy: '48',
-        card: 'RBS11124H9VP1KG0',
+        card: 'gaurav',
         GREEN:true
       },
     ],
   },
   {
-    title: 'Dec 3, 2024',
-    price: '£11.71',
+    title: 'Jan 10, 2025',
+    price: '£121.22',
     items: [
+      {
+        id: '1',
+        description: 'KS LOGISTICS LTD',
+        amount: '£120.',
+        neachy: '00',
+        card: 'INVOICE',
+        GREEN:true
+      },
+   
+     
+    ],
+  },
+  {
+    title: 'Jan 3, 2025',
+    price: '£1.22',
+    items: [
+      {
+        id: '1',
+        description: 'NYX*EuroGaraesLtd',
+        amount: '-£1.',
+        neachy: '00',
+        card: 'Borehamwood',
+      },
+   
+     
+    ],
+  },
+  // {
+  //   title: 'Dec 17, 2024',
+  //   price: '£106.90',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'CASH NOTEMAC DEC17',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'Notemachine @21:47',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'CASH NOTEMAC DEC17',
+  //       amount: '-£250.',
+  //       neachy: '00',
+  //       card: 'Notemachine @21:47',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'SANIYA MIRZA ',
+  //       amount: '£100.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //       GREEN:true
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'HUTTE SUPERMARKET ',
+  //       amount: '-£33.',
+  //       neachy: '80',
+  //       card: 'ILFORD IG1',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'COLONY RESTAURANT',
+  //       amount: '-£13.',
+  //       neachy: '30',
+  //       card: 'ILFORD',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'CASH BNKM DEC16',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'MFG-LOXFOR@23:54',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'CASH BNKM DEC16',
+  //       amount: '-£250.',
+  //       neachy: '00',
+  //       card: 'MFG-LOXFOR@23:53',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Dec 16, 2024',
+  //   price: '£754.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'MIRZA S',
+  //       amount: '£750.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //       GREEN:true
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Dec 13, 2024',
+  //   price: '£4.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'NISA LOCAL',
+  //       amount: '-£41.',
+  //       neachy: '19',
+  //       card: 'LONDON',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Dec 12, 2024',
+  //   price: '£45.19',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'Saniya Mirza',
+  //       amount: '-£60.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'Saniya Mirza',
+  //       amount: '-£2,600.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Dec 11, 2024',
+  //   price: '£2,705.19',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'CASH RB SCOT DEC11',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'TESCO LRV DO@21:43',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'CASH RB SCOT DEC11',
+  //       amount: '-£250.',
+  //       neachy: '00',
+  //       card: 'TESCO LRV DO@21:42',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: '2024121100166838',
+  //       amount: '-£5.',
+  //       neachy: '00',
+  //       card: 'RBS11124H9VP1KG0',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'ADVICE CONFIRMS',
+  //       amount: '£2,998.',
+  //       neachy: '48',
+  //       card: 'RBS11124H9VP1KG0',
+  //       GREEN:true
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Dec 3, 2024',
+  //   price: '£11.71',
+  //   items: [
     
-      {
-        id: '1',
-        description: 'MIRZA S',
-        amount: '£10.',
-        neachy: '00',
-        card: 'PAYMENT',
-        GREEN:true
-      },
-    ],
-  },
-  {
-    title: 'NOV 18, 2024',
-    price: '£1.71',
-    items: [
-      {
-        id: '1',
-        description: 'THE OFFY',
-        amount: '-£2.',
-        neachy: '79',
-        card: 'ENFIELD',
-      },
-      {
-        id: '1',
-        description: 'THE OFFY',
-        amount: '-£3.',
-        neachy: '00',
-        card: 'ENFIELD',
-      },
-      {
-        id: '1',
-        description: 'TGF PIZZA',
-        amount: '-£12.',
-        neachy: '80',
-        card: 'ENFIELD',
-      },
-      {
-        id: '1',
-        description: 'ENFIELD FOOD CENTER',
-        amount: '-£9.',
-        neachy: '70',
-        card: 'ENFIELD',
-      },
-    ],
-  },
-  {
-    title: 'Nov 16, 2024',
-    price: '£30.00',
-    items: [
-      {
-        id: '1',
-        description: 'CASH NOTEMAC NOV16',
-        amount: '-£30.',
-        neachy: '00',
-        card: 'Notemachine @19:56',
-      },
+  //     {
+  //       id: '1',
+  //       description: 'MIRZA S',
+  //       amount: '£10.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //       GREEN:true
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'NOV 18, 2024',
+  //   price: '£1.71',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'THE OFFY',
+  //       amount: '-£2.',
+  //       neachy: '79',
+  //       card: 'ENFIELD',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'THE OFFY',
+  //       amount: '-£3.',
+  //       neachy: '00',
+  //       card: 'ENFIELD',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'TGF PIZZA',
+  //       amount: '-£12.',
+  //       neachy: '80',
+  //       card: 'ENFIELD',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'ENFIELD FOOD CENTER',
+  //       amount: '-£9.',
+  //       neachy: '70',
+  //       card: 'ENFIELD',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Nov 16, 2024',
+  //   price: '£30.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'CASH NOTEMAC NOV16',
+  //       amount: '-£30.',
+  //       neachy: '00',
+  //       card: 'Notemachine @19:56',
+  //     },
       
-    ],
-  },  
-  {
-    title: 'Nov 15, 2024',
-    price: '£60.00',
-    items: [
-      {
-        id: '1',
-        description: 'SANIYA MIRZA',
-        amount: '£50.',
-        neachy: '00',
-        card: 'PAYMENT',
-        GREEN:true
-      },
+  //   ],
+  // },  
+  // {
+  //   title: 'Nov 15, 2024',
+  //   price: '£60.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'SANIYA MIRZA',
+  //       amount: '£50.',
+  //       neachy: '00',
+  //       card: 'PAYMENT',
+  //       GREEN:true
+  //     },
       
-    ],
-  }, 
-   {
-    title: 'NOV 14, 2024',
-    price: '£1.71',
-    items: [
-      {
-        id: '1',
-        description: 'CASH NOTEMAC NOV14',
-        amount: '-£50.',
-        neachy: '00',
-        card: 'Notemachine @19:13',
-      },
-      {
-        id: '1',
-        description: 'Zaki Akhtar',
-        amount: '£40.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-        GREEN:true
-      },
+  //   ],
+  // }, 
+  //  {
+  //   title: 'NOV 14, 2024',
+  //   price: '£1.71',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'CASH NOTEMAC NOV14',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'Notemachine @19:13',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'Zaki Akhtar',
+  //       amount: '£40.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //       GREEN:true
+  //     },
      
-    ],
-  },
-  {
-    title: 'NOV 13, 2024',
-    price: '£20.00',
-    items: [
-      {
-        id: '1',
-        description: 'Aziz',
-        amount: '-£5.',
-        neachy: '00',
-        card: 'Payment',
-      },
-      {
-        id: '1',
-        description: 'Abdul mateen',
-        amount: '£5.',
-        neachy: '00',
-        card: 'Payment',
-        GREEN:true
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'NOV 13, 2024',
+  //   price: '£20.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'Aziz',
+  //       amount: '-£5.',
+  //       neachy: '00',
+  //       card: 'Payment',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'Abdul mateen',
+  //       amount: '£5.',
+  //       neachy: '00',
+  //       card: 'Payment',
+  //       GREEN:true
+  //     },
      
-    ],
-  },
-  {
-    title: 'NOV 9, 2024',
-    price: '£30.00',
-    items: [
-      {
-        id: '1',
-        description: 'Saniya Mirza',
-        amount: '£20.',
-        neachy: '00',
-        card: 'Saniya Nirza Saniy',
-        GREEN:true
-      },
-      {
-        id: '1',
-        description: 'Saniya Mirza',
-        amount: '-£10.',
-        neachy: '00',
-        card: 'payment',
-      },
-      {
-        id: '1',
-        description: 'Saniya Mirza',
-        amount: '£20.',
-        neachy: '00',
-        card: '',
-        GREEN:true
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'NOV 9, 2024',
+  //   price: '£30.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'Saniya Mirza',
+  //       amount: '£20.',
+  //       neachy: '00',
+  //       card: 'Saniya Nirza Saniy',
+  //       GREEN:true
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'Saniya Mirza',
+  //       amount: '-£10.',
+  //       neachy: '00',
+  //       card: 'payment',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'Saniya Mirza',
+  //       amount: '£20.',
+  //       neachy: '00',
+  //       card: '',
+  //       GREEN:true
+  //     },
     
      
-    ],
-  },
+  //   ],
+  // },
  
   
 ];
@@ -382,7 +429,7 @@ const onSheetDrag = (value) => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           marginVertical: 5,
-          backgroundColor: '#D3D3D3',
+          backgroundColor: '#EDEDED',
         }}>
         <Text style={styles.titles}>{item.title}</Text>
         <Text style={styles.titless}>{item.price}</Text>
@@ -410,7 +457,7 @@ const onSheetDrag = (value) => {
         <Text
           style={[
             styles.prices,
-            { color: item?.GREEN == true ? '#6AB651' : '#444245' },
+            { color: item?.GREEN == true ? '#168881' : '#444245' },
           ]}>
           {item.amount}
           <Text style={{ fontSize: 13 }}>{item?.neachy}</Text>
@@ -432,9 +479,9 @@ const onSheetDrag = (value) => {
           <TouchableOpacity onPress={()=>navigation.goBack()} style={{ alignItems: 'center', justifyContent: 'center' }}>
             <Icon name="arrow-back-outline" size={25} color={Black} />
           </TouchableOpacity>
-          <View style={{ justifyContent: 'center', marginHorizontal: 10 }}>
+          <View style={{ justifyContent: 'center', marginHorizontal: 10,alignItems:'center',width:'80%', }}>
             <Text style={{ color: Black, fontSize: 16,fontWeight:'500' }}>BANK A/C</Text>
-            <Text style={{ color: Black,fontWeight:'500' }}>40-12-62 54731875</Text>
+            <Text style={{ color: Black,fontWeight:'500' }}> £6.22</Text>
           </View>
         </View>
         <View
@@ -448,7 +495,7 @@ const onSheetDrag = (value) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£49.30</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£6.22</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>
@@ -588,18 +635,18 @@ const onSheetDrag = (value) => {
       backgroundColor: 'transparent',
     },
     draggableIcon: {
-      backgroundColor: 'grey',
+      backgroundColor: '#EDEDED',
       width: 80,
       alignSelf: 'center',
     },
     container: {
-      height: 390, // match this height
+      height:Dimensions.get('screen').height/1.2, // match this height
     },
   }}
   onDragEnd={() => {
     // Ensure the sheet doesn't go above the top
     if (refRBSheet.current.getCurrentPosition() < 0) {
-      refRBSheet.current.setState({ height: 190 });
+      refRBSheet.current.setState({ height: 690 });
     }
   }}
 >

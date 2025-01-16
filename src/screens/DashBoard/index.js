@@ -142,7 +142,7 @@ const DashBoard = ({navigation}) => {
         <View style={{ flexDirection: 'row' }}>
           <Text style={{ color: '#989898', fontSize: 16 }}>40-12-62</Text>
           <Text style={{ color: '#989898', fontSize: 16, paddingLeft: 7 }}>
-          54731875
+          24715586
           </Text>
         </View>
         <Text
@@ -152,7 +152,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £49.30
+          £6.22
         </Text>
       </View>
       </TouchableOpacity>
@@ -163,6 +163,22 @@ const DashBoard = ({navigation}) => {
 <Icon name='chevron-forward-outline' size={25} color={'#181818'}/>
 </View>
 <Text style={{color:'#181818',fontSize:15,fontWeight:'500'}}>View currency balances</Text>
+      </View>
+      <View style={{borderWidth:0.3,marginHorizontal:15,borderColor:'grey',marginBottom:20}}>
+
+      </View>
+      <View style={{marginHorizontal:15}}>
+<Text style={{color:Black,fontSize:16,fontWeight:'500'}}>HSBC CURRENCY ACCOUNT</Text>
+<Text style={{ color: '#989898', fontSize: 16, }}>40-11-99 92832678
+          </Text>
+          <View style={{flexDirection:'row',justifyContent:"space-between"}}>
+          <Text style={{color:'#181818',fontSize:15,fontWeight:'500',marginVertical:25}}>View currency balances</Text>
+
+<View style={{alignItems:'flex-end'}}>
+<Text style={{color:'#000',fontSize:18,fontWeight:'800'}}>€0.00</Text>
+<Text style={{color:'#000',fontSize:16}}>€0.00</Text>
+</View>
+          </View>
       </View>
       </View>
 
