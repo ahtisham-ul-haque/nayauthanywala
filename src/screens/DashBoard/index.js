@@ -156,14 +156,16 @@ const DashBoard = ({navigation}) => {
         </Text>
       </View>
       </TouchableOpacity>
-      <View style={{marginVertical:20,marginHorizontal:15}}>
+      <TouchableOpacity 
+      onPress={()=>navigation.navigate('GlobalMoneyAccount')}
+      style={{marginVertical:20,marginHorizontal:15}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>GLOBAL MONEY ACCOUNT</Text>
 <View style={{alignItems:'flex-end'}}>
 
 <Icon name='chevron-forward-outline' size={25} color={'#181818'}/>
 </View>
 <Text style={{color:'#181818',fontSize:15,fontWeight:'500'}}>View currency balances</Text>
-      </View>
+      </TouchableOpacity>
       <View style={{borderWidth:0.3,marginHorizontal:15,borderColor:'grey',marginBottom:20}}>
 
       </View>

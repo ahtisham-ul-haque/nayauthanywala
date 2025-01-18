@@ -17,6 +17,11 @@ import From from '../screens/From';
 import To from '../screens/To/PayeeList';
 import To_1 from '../screens/To_1/To_1';
 import Pin from '../screens/Pin/Pin'
+import GlobalMoneyAccount from '../screens/GlobalMoneyAccount/GlobalMoneyAccount';
+import GlobalBritishPounds from '../screens/GlobalBritishPounds/GlobalBritishPounds';
+import ManageAccount from '../screens/ManageAccount/ManageAccount';
+import AccountDetailsScreen from '../screens/AccountDetails/AccountDetails';
+import CurrenciesScreen from '../screens/Curencies/CurrenciesScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -73,6 +78,8 @@ function MyTabs() {
         component={Profile}
         options={{ headerShown: false }}
       />
+       
+      
     </Tab.Navigator>
   );
 }
@@ -115,11 +122,37 @@ const MainNavigation = () => {
           component={Paytransfer}
           options={{ headerShown: false }}
         />
+       
+
          <Stack.Screen
-          name="Froms"
-          component={From}
+          name="GlobalMoneyAccount"
+          component={GlobalMoneyAccount}
           options={{ headerShown: false }}
         />
+          <Stack.Screen
+          name="AccountDetailsScreen"
+          component={AccountDetailsScreen}
+          options={{ headerShown: false }}
+        />
+           <Stack.Screen
+          name="CurrenciesScreen"
+          component={CurrenciesScreen}
+          options={{ headerShown: false }}
+        />
+        
+        
+          <Stack.Screen
+          name="ManageAccount"
+          component={ManageAccount}
+          options={{ headerShown: false }}
+        />
+        
+         <Stack.Screen
+          name="GlobalBritishPounds"
+          component={GlobalBritishPounds}
+          options={{ headerShown: false }}
+        />
+        
            <Stack.Screen
           name="To"
           component={To}
