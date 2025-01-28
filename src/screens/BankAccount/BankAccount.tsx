@@ -6,8 +6,45 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const transactions = [
   {
-    title: 'Jan 13, 2025',
+    title: 'Jan 15, 2025',
     price: '£6.22',
+    items: [
+      {
+        id: '1',
+        description: 'Gaurav Saini',
+        amount: '-£330.',
+        neachy: '00',
+        card: 'personal',
+      },
+   
+      {
+        id: '1',
+        description: 'Gaurav Saini',
+        amount: '-£1,620.',
+        neachy: '00',
+        card: 'pisp1376634890',
+      },
+      {
+        id: '1',
+        description: 'KS LOGISTICS LTD',
+        amount: '£1950.',
+        neachy: '00',
+        card: 'INVOICE',
+        GREEN:true
+      },
+      {
+        id: '1',
+        description: 'Gaurav Saini',
+        amount: '£330.',
+        neachy: '00',
+        card: 'gaurav',
+        GREEN:true
+      },
+    ],
+  },
+  {
+    title: 'Jan 13, 2025',
+    price: '£1.22',
     items: [
       {
         id: '1',

@@ -23,7 +23,9 @@ const CurrenciesScreen = ({navigation}) => {
 
   // Render each currency item
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.itemContainer}>
+    <TouchableOpacity 
+    onPress={()=>navigation.navigate('GlobalBritishPounds',{data:'agya'})}
+    style={styles.itemContainer}>
       <View>
         <Text style={styles.currencyName}>{item.name}</Text>
         <Text style={styles.currencyValue}>{item.value}</Text>

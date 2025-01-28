@@ -71,14 +71,14 @@ const AccountDetailsScreen = ({navigation}) => {
         <View style={styles.detailRow}>
 {!phala ? 
             <View>
-    <Text style={styles.detailLabel}>Short code </Text>
+    <Text style={styles.detailLabels}>Short code </Text>
           <Text style={styles.detailLabel}>40-16-72</Text>
           </View>
           :
           <>
           <View>
 
-          <Text style={styles.detailLabel}>IBAN</Text>
+          <Text style={styles.detailLabels}>IBAN</Text>
           <Text style={styles.detailLabel}>GB71HBUK40167284742532</Text>
           </View>
 
@@ -97,13 +97,13 @@ const AccountDetailsScreen = ({navigation}) => {
             phala ? 
             <View>
 
-            <Text style={styles.detailLabel}>SWIFT / BIC</Text>
+            <Text style={styles.detailLabels}>SWIFT / BIC</Text>
   <Text style={styles.detailLabel}>HBUKGB4197A</Text>
   </View>
 :
 <View>
 
-<Text style={styles.detailLabel}>Account number</Text>
+<Text style={styles.detailLabels}>Account number</Text>
 <Text style={styles.detailLabel}>84742532</Text>
 </View>
           }
@@ -181,6 +181,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 16,
     paddingVertical:10
+  },
+  detailLabels: {
+    fontSize: 14,
+    color:Black,
   },
   detailLabel: {
     fontSize: 14,

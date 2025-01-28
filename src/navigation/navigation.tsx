@@ -22,6 +22,8 @@ import GlobalBritishPounds from '../screens/GlobalBritishPounds/GlobalBritishPou
 import ManageAccount from '../screens/ManageAccount/ManageAccount';
 import AccountDetailsScreen from '../screens/AccountDetails/AccountDetails';
 import CurrenciesScreen from '../screens/Curencies/CurrenciesScreen';
+import ManageCard from '../screens/ManageCaed/ManageCard';
+import Statement from '../screens/StateMent/Statement';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -134,6 +136,18 @@ const MainNavigation = () => {
           component={AccountDetailsScreen}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="ManageCard"
+          component={ManageCard}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="Statement"
+          component={Statement}
+          options={{ headerShown: false }}
+        />
+        
+        
            <Stack.Screen
           name="CurrenciesScreen"
           component={CurrenciesScreen}

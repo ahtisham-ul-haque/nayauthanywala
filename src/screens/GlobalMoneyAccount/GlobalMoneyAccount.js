@@ -4,9 +4,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const GlobalMoneyAccount = ({navigation}) => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.cantainer}>
 
-    <View style={styles.cantainer}>
+    <View >
         <View style={{flexDirection:'row',paddingVertical:10,height:50,}}>
              <TouchableOpacity
              onPress={()=>navigation.goBack()}
@@ -39,6 +39,24 @@ const GlobalMoneyAccount = ({navigation}) => {
         <Ionicons name='chevron-down-outline' color={'#000'} size={20} />
         </TouchableOpacity>
     </View>
+    <View style={styles.tabBars}>
+                <View style={styles.tabItems}>
+                  <Ionicons name="wallet" size={24} color="red" />
+                  <Text style={[styles.tabTexts, { color: 'red' }]}>Accounts</Text>
+                </View>
+                <View style={styles.tabItems}>
+                  <Ionicons name="swap-horizontal-outline" size={24} color="gray" />
+                  <Text style={styles.tabTexts}>Pay & Transfer</Text>
+                </View>
+                <View style={styles.tabItems}>
+                  <Ionicons name="bar-chart-outline" size={24} color="gray" />
+                  <Text style={styles.tabTexts}>Plan</Text>
+                </View>
+                <View style={styles.tabItems}>
+                  <Ionicons name="help-circle-outline" size={24} color="gray" />
+                  <Text style={styles.tabTexts}>Support</Text>
+                </View>
+              </View>
     </SafeAreaView>
 
   )
@@ -50,5 +68,28 @@ const styles = StyleSheet.create({
     cantainer :{
         flex:1,
         backgroundColor:'#fff',
+    },
+    tabBars: {
+      position:'absolute',
+      bottom:0,
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      borderTopWidth: 1,
+      borderTopColor: '#ddd',
+      paddingVertical: 8,
+      backgroundColor: '#fff',
+      width:'100%'
+    },
+    tabItems: {
+      alignItems: 'center',
+    },
+    tabTexts: {
+      fontSize: 12,
+      marginTop: 4,
+      color: '#666',
+    },
+    headerContainer: {
+      alignItems: 'center',
+      marginBottom: 20,
     },
 })
