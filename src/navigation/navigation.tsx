@@ -80,7 +80,6 @@ function MyTabs() {
         component={Profile}
         options={{ headerShown: false }}
       />
-       
       
     </Tab.Navigator>
   );
@@ -122,6 +121,11 @@ const MainNavigation = () => {
          <Stack.Screen
           name="Paytransfer"
           component={Paytransfer}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="From"
+          component={From}
           options={{ headerShown: false }}
         />
        

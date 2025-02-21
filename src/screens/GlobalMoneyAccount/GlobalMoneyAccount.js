@@ -23,9 +23,45 @@ const GlobalMoneyAccount = ({navigation}) => {
         onPress={()=>navigation.navigate('GlobalBritishPounds')} 
         style={{height:Dimensions.get('screen').height/10,margin:10,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
 <View style={{height:Dimensions.get('screen').height/14}}>
-<Text style={{color:'#000',fontSize:16}}>Global British Pounds</Text>
-<Text style={{color:'#000',}}>0.00 GBP</Text>
-<Text style={{color:'#000',}}>= 0.00 USD</Text>
+<Text style={{color:'#000',fontSize:16}}>Great British Pounds</Text>
+<Text style={{color:'#000',}}>9.00 GBP</Text>
+{/* <Text style={{color:'#000',}}>= 0.00 USD</Text> */}
+</View>
+<View>
+<Ionicons name='chevron-forward-outline' color={'#000'} size={20} />
+</View>
+        </TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=>navigation.navigate('GlobalBritishPounds')} 
+        style={{height:Dimensions.get('screen').height/10,margin:10,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+<View style={{height:Dimensions.get('screen').height/14}}>
+<Text style={{color:'#000',fontSize:16}}>UAE Dirham</Text>
+<Text style={{color:'#000',}}>9.27 AED</Text>
+<Text style={{color:'#000',}}>= 2.01 GBP</Text>
+</View>
+<View>
+<Ionicons name='chevron-forward-outline' color={'#000'} size={20} />
+</View>
+        </TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=>navigation.navigate('GlobalBritishPounds')} 
+        style={{height:Dimensions.get('screen').height/10,margin:10,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+<View style={{height:Dimensions.get('screen').height/14}}>
+<Text style={{color:'#000',fontSize:16}}>Euro</Text>
+<Text style={{color:'#000',}}>2.38 Euro</Text>
+<Text style={{color:'#000',}}>= 1.99 GBP</Text>
+</View>
+<View>
+<Ionicons name='chevron-forward-outline' color={'#000'} size={20} />
+</View>
+        </TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=>navigation.navigate('GlobalBritishPounds')} 
+        style={{height:Dimensions.get('screen').height/10,margin:10,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+<View style={{height:Dimensions.get('screen').height/14}}>
+<Text style={{color:'#000',fontSize:16}}>US Dollar</Text>
+<Text style={{color:'#000',}}>1.24 USD</Text>
+<Text style={{color:'#000',}}>= 0.99 GBP</Text>
 </View>
 <View>
 <Ionicons name='chevron-forward-outline' color={'#000'} size={20} />

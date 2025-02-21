@@ -140,9 +140,9 @@ const DashBoard = ({navigation}) => {
         }}>
         <Text style={{ color: '#181818', fontSize: 16 }}>BANK A/C </Text>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ color: '#989898', fontSize: 16 }}>40-12-62</Text>
+          <Text style={{ color: '#989898', fontSize: 16 }}>40-16-63</Text>
           <Text style={{ color: '#989898', fontSize: 16, paddingLeft: 7 }}>
-          24715586
+          11198726  
           </Text>
         </View>
         <Text
@@ -152,7 +152,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £6.22
+          £3.31
         </Text>
       </View>
       </TouchableOpacity>
@@ -169,16 +169,40 @@ const DashBoard = ({navigation}) => {
       <View style={{borderWidth:0.3,marginHorizontal:15,borderColor:'grey',marginBottom:20}}>
 
       </View>
+      <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
+<Text style={{color:Black,fontSize:16,fontWeight:'500'}}>FLEX SAVER </Text>
+<Text style={{ color: '#989898', fontSize: 16, }}>40-16-63 31793209
+          </Text>
+          <View style={{flexDirection:'row',justifyContent:"space-between"}}>
+          <Text style={{color:'#181818',fontSize:15,fontWeight:'500',marginVertical:10}}></Text>
+
+<View style={{alignItems:'flex-end'}}>
+<Text style={{color:'#000',fontSize:22,fontWeight:'400'}}>£0.00</Text>
+</View>
+          </View>
+      </View>
+      <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
+<Text style={{color:Black,fontSize:16,fontWeight:'500'}}>FLEX RATE ISA </Text>
+<Text style={{ color: '#989898', fontSize: 16, }}>40-16-63 71799207
+          </Text>
+          <View style={{flexDirection:'row',justifyContent:"space-between"}}>
+          <Text style={{color:'#181818',fontSize:15,fontWeight:'500',marginVertical:10}}></Text>
+
+<View style={{alignItems:'flex-end'}}>
+<Text style={{color:'#000',fontSize:22,fontWeight:'400'}}>£0.00</Text>
+</View>
+          </View>
+      </View>
       <View style={{marginHorizontal:15}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>HSBC CURRENCY ACCOUNT</Text>
-<Text style={{ color: '#989898', fontSize: 16, }}>40-11-99 92832678
+<Text style={{ color: '#989898', fontSize: 16, }}>40-11-99 92814236
           </Text>
           <View style={{flexDirection:'row',justifyContent:"space-between"}}>
           <Text style={{color:'#181818',fontSize:15,fontWeight:'500',marginVertical:25}}>View currency balances</Text>
 
 <View style={{alignItems:'flex-end'}}>
-<Text style={{color:'#000',fontSize:18,fontWeight:'800'}}>€0.00</Text>
-<Text style={{color:'#000',fontSize:16}}>€0.00</Text>
+<Text style={{color:'#000',fontSize:18,fontWeight:'800'}}>€1.19</Text>
+<Text style={{color:'#000',fontSize:16}}>€1.19</Text>
 </View>
           </View>
       </View>

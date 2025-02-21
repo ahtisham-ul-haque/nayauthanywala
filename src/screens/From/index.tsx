@@ -58,17 +58,33 @@ elevation: 5,backgroundColor:White,justifyContent:'space-between',alignItems:'ce
     <MaterialCommunityIcons  name='dots-vertical' color={Black} size={20}/>
     </View>
     </View>
-   <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-<View style={{height:80,width:'50%'}}>
-<Image source={require("../../assets/images/b3ff7b19-7802-4e69-80e3-fc132448dc9e.png")} resizeMode='contain' style={{height:'100%',width:"100%"}}/>
+   <TouchableOpacity 
+   onPress={()=>navigation.navigate('To')}
+   style={{marginVertical:5,justifyContent:'space-between',width:'100%',flexDirection:'row',alignItems:'center'}}>
+<View style={{padding:20,width:'50%'}}>
+  <Text style={{color:Black,fontSize:16}}>Bank a/c</Text>
+  <Text style={{color:Black,fontSize:16}}>40-12-62 25857635</Text>
 </View>
-<Text style={{color:Black,fontSize:14,width:'80%',marginTop:20,textAlign:'center',fontWeight:'600'}}>
-  We're unable to process this request as 
-either you don't hold an eligible account or 
-the personal details we hold for you are notbr 
-up to date. Please chat to us in the support 
-              tab.CDDINH1
-</Text>
+<View style={{flexDirection:'row',}}>
+<View>
+<Text style={{color:Black,fontSize:16}}>£0.22</Text>
+</View>
+<View style={{marginHorizontal:20,borderWidth:2,height:20,width:20,borderRadius:20}}>
+</View>
+</View>
+   </TouchableOpacity>
+   <View style={{justifyContent:'space-between',width:'100%',flexDirection:'row',alignItems:'center'}}>
+<View style={{padding:20}}>
+  <Text style={{color:Black,fontSize:15}}>GLOBAL MONEY ACCOUNT</Text>
+  <Text style={{color:Black,fontSize:16}}>40-16-72 9465567</Text>
+</View>
+<View style={{flexDirection:'row',}}>
+<View>
+<Text style={{color:Black,fontSize:16}}>£9.00</Text>
+</View>
+<View style={{marginHorizontal:20,borderWidth:2,height:20,width:20,borderRadius:20}}>
+</View>
+</View>
    </View>
     {/* <TouchableOpacity 
     onPress={()=>navigation.navigate('To')}

@@ -16,39 +16,39 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const payees = [
   {
     id: '1',
-    name: 'STRATEGENE LTD',
-    number: '23-05-80 54222696',
-    note: 'my com',
-    initial: 'S',
+    name: 'Tanting ltd',
+    number: '30-54-66 15499260',
+    note: 'tanting',
+    initial: 'T',
   },
   {
     id: '2',
-    name: 'gurtej s judge',
-    number: '30-93-60 78194360',
-    note: 'my ac',
-    initial: 'G',
+    name: 'zishan dastagir Ah',
+    number: '60-84-07 40273816',
+    note: 'zishan',
+    initial: 'Z',
   },
-  {
-    id: '3',
-    name: 'harsh',
-    number: '04-00-03 87417878',
-    note: 'friend',
-    initial: 'H',
-  },
-  {
-    id: '4',
-    name: 'jagjit singh',
-    number: '04-00-03 67225417',
-    note: 'friend',
-    initial: 'J',
-  },
-  {
-    id: '5',
-    name: 'Strategene ltd',
-    number: '23-05-80 54205805',
-    note: 'my com',
-    initial: 'S',
-  },
+  // {
+  //   id: '3',
+  //   name: 'harsh',
+  //   number: '04-00-03 87417878',
+  //   note: 'friend',
+  //   initial: 'H',
+  // },
+  // {
+  //   id: '4',
+  //   name: 'jagjit singh',
+  //   number: '04-00-03 67225417',
+  //   note: 'friend',
+  //   initial: 'J',
+  // },
+  // {
+  //   id: '5',
+  //   name: 'Strategene ltd',
+  //   number: '23-05-80 54205805',
+  //   note: 'my com',
+  //   initial: 'S',
+  // },
 ];
 
 const PayeeList = ({route}) => {
@@ -102,10 +102,10 @@ const MyAccounts = () => (
   <TouchableOpacity style={styles.accountItem} >
   <View>
     <Text style={styles.accountName}>GLOBAL MONEY ACCOUNT</Text>
-    <Text style={styles.accountNumber}> 40-16-72 33866556</Text>
+    <Text style={styles.accountNumber}> 40-16-72 94655567</Text>
   </View>
   <View style={styles.accountBalanceContainer}>
-    <Text style={styles.accountBalance}>£2.00</Text>
+    <Text style={styles.accountBalance}>£9.00</Text>
     <Icon
       name={'radio-button-unchecked'}
       size={24}
