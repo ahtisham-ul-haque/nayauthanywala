@@ -152,7 +152,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £3.31
+          £1.31
         </Text>
       </View>
       </TouchableOpacity>
@@ -201,8 +201,8 @@ const DashBoard = ({navigation}) => {
           <Text style={{color:'#181818',fontSize:15,fontWeight:'500',marginVertical:25}}>View currency balances</Text>
 
 <View style={{alignItems:'flex-end'}}>
-<Text style={{color:'#000',fontSize:18,fontWeight:'800'}}>€1.19</Text>
-<Text style={{color:'#000',fontSize:16}}>€1.19</Text>
+<Text style={{color:'#000',fontSize:18,fontWeight:'800'}}>€0.00</Text>
+<Text style={{color:'#000',fontSize:16}}>€0.00</Text>
 </View>
           </View>
       </View>

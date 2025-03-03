@@ -6,6 +6,21 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const transactions = [
   {
+    title: 'Mar 3, 2025',
+    price: '£1.31',
+    items: [
+      {
+        id: '1',
+        description: 'Sahil  arora',
+        amount: '-£2.',
+        neachy: '00',
+        card: 'LONDON',
+      },
+   
+     
+    ],
+  },
+  {
     title: 'Feb 20, 2025',
     price: '£3.31',
     items: [
@@ -1161,7 +1176,7 @@ const onSheetDrag = (value) => {
           </TouchableOpacity>
           <View style={{ justifyContent: 'center', marginHorizontal: 10,alignItems:'center',width:'80%', }}>
             <Text style={{ color: Black, fontSize: 16,fontWeight:'500' }}>BANK A/C</Text>
-            <Text style={{ color: Black,fontWeight:'500' }}> £3.31</Text>
+            <Text style={{ color: Black,fontWeight:'500' }}>40-16-63 11198726</Text>
           </View>
         </View>
         <View
@@ -1175,7 +1190,7 @@ const onSheetDrag = (value) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£3.31</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£1.31</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>
