@@ -46,7 +46,7 @@ const Login = ({}) => {
             marginHorizontal: 20,
             marginVertical: 25,
           }}>
-          Good evening naman***
+          Good afernoon cotoan***
         </Text>
       </View>
         <TouchableOpacity

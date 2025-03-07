@@ -140,9 +140,9 @@ const DashBoard = ({navigation}) => {
         }}>
         <Text style={{ color: '#181818', fontSize: 16 }}>BANK A/C </Text>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ color: '#989898', fontSize: 16 }}>40-16-63</Text>
+          <Text style={{ color: '#989898', fontSize: 16 }}>40-11-93</Text>
           <Text style={{ color: '#989898', fontSize: 16, paddingLeft: 7 }}>
-          11198726  
+          02038625  
           </Text>
         </View>
         <Text
@@ -152,11 +152,11 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-          £1.31
+         £1.93
         </Text>
       </View>
       </TouchableOpacity>
-      <TouchableOpacity 
+      {/* <TouchableOpacity 
       onPress={()=>navigation.navigate('GlobalMoneyAccount')}
       style={{marginVertical:20,marginHorizontal:15}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>GLOBAL MONEY ACCOUNT</Text>
@@ -165,11 +165,11 @@ const DashBoard = ({navigation}) => {
 <Icon name='chevron-forward-outline' size={25} color={'#181818'}/>
 </View>
 <Text style={{color:'#181818',fontSize:15,fontWeight:'500'}}>View currency balances</Text>
-      </TouchableOpacity>
-      <View style={{borderWidth:0.3,marginHorizontal:15,borderColor:'grey',marginBottom:20}}>
+      </TouchableOpacity> */}
+      {/* <View style={{borderWidth:0.3,marginHorizontal:15,borderColor:'grey',marginBottom:20}}>
 
-      </View>
-      <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
+      </View> */}
+      {/* <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>FLEX SAVER </Text>
 <Text style={{ color: '#989898', fontSize: 16, }}>40-16-63 31793209
           </Text>
@@ -180,8 +180,8 @@ const DashBoard = ({navigation}) => {
 <Text style={{color:'#000',fontSize:22,fontWeight:'400'}}>£0.00</Text>
 </View>
           </View>
-      </View>
-      <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
+      </View> */}
+      {/* <View style={{marginHorizontal:15,borderBottomWidth:0.5,marginVertical:10}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>FLEX RATE ISA </Text>
 <Text style={{ color: '#989898', fontSize: 16, }}>40-16-63 71799207
           </Text>
@@ -192,8 +192,8 @@ const DashBoard = ({navigation}) => {
 <Text style={{color:'#000',fontSize:22,fontWeight:'400'}}>£0.00</Text>
 </View>
           </View>
-      </View>
-      <View style={{marginHorizontal:15}}>
+      </View> */}
+      {/* <View style={{marginHorizontal:15}}>
 <Text style={{color:Black,fontSize:16,fontWeight:'500'}}>HSBC CURRENCY ACCOUNT</Text>
 <Text style={{ color: '#989898', fontSize: 16, }}>40-11-99 92814236
           </Text>
@@ -205,7 +205,7 @@ const DashBoard = ({navigation}) => {
 <Text style={{color:'#000',fontSize:16}}>€0.00</Text>
 </View>
           </View>
-      </View>
+      </View> */}
       </View>
 
       </>

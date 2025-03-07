@@ -5,662 +5,650 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const transactions = [
+  // {
+  //   title: 'Mar 06, 2025',
+  //   price: '£5,763.00',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: '202503060061476',
+  //       amount: '-£5.',
+  //       neachy: '00',
+  //       card: 'RBS06035H95YJY02',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'ADVICE CONFIRMS',
+  //       amount: '£5,766.07',
+  //       neachy: '00',
+  //       card: 'RBS06035H95YJY02',
+  //       GREEN:true
+  //     },
+     
+  //   ],
+  // },
+  // {
+  //   title: 'Mar 3, 2025',
+  //   price: '£1.31',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'Sahil  arora',
+  //       amount: '-£2.',
+  //       neachy: '00',
+  //       card: 'LONDON',
+  //     },
+   
+     
+  //   ],
+  // },
   {
-    title: 'Mar 3, 2025',
-    price: '£1.31',
+    title: 'Feb 22, 2025',
+    price: '£1.93',
     items: [
       {
         id: '1',
-        description: 'Sahil  arora',
-        amount: '-£2.',
+        description: 'TOMA BIMBAI',
+        amount: '-£22.',
         neachy: '00',
-        card: 'LONDON',
+        card: 'Friend',
       },
    
      
     ],
   },
   {
-    title: 'Feb 20, 2025',
-    price: '£3.31',
-    items: [
-      {
-        id: '1',
-        description: 'UBER * EATS PEND',
-        amount: '-£37.',
-        neachy: '75',
-        card: 'LONDON',
-      },
-   
-     
-    ],
-  },
-  {
-    title: 'Feb 19, 2025',
-    price: '£41.06',
+    title: 'Feb 14, 2025',
+    price: '£23.93',
     items: [
       {
         id: '2',
-        description: 'Sahil  arora',
-        amount: '-£800.',
+        description: 'LONDON BOROUGH OF',
+        amount: '-£1,320.',
         neachy: '00',
-        card: 'Thank you',
+        card: 'WWW.NEWHAM.GO',
       },
    
      
     ],
   },
   {
-    title: 'Feb 18, 2025',
-    price: '£841.06',
+    title: 'Feb 13, 2025',
+    price: '£1,343.93',
     items: [
       {
         id: '3',
-        description: 'lulian Florinel St',
-        amount: '£800.',
+        description: 'CASH BARCLAY FEB13',
+        amount: '£300.',
         neachy: '00',
-        card: 'Sent from Revolut',
+        card: 'STRATFORD 1 @20.03',
       },
-      {
-        id: '4',
-        description: 'Mehakdeep Singh',
-        amount: '-£390.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '5',
-        description: 'Gursharan kaur',
-        amount: '-£350.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '6',
-        description: 'AJAY KUMAR',
-        amount: '-£750.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '7',
-        description: 'UBER* PENDING UBER',
-        amount: '-£17.',
-        neachy: '78',
-        card: 'LONDON',
-      },
-      {
-        id: '8',
-        description: 'FRESHCO',
-        amount: '-£10.',
-        neachy: '85',
-        card: 'SLOUGH',
-      },
-      {
-        id: '9',
-        description: 'MCDONALDS 50',
-        amount: '-£9.',
-        neachy: '86',
-        card: 'UXBRIDGE',
-      },
+        // {
+        //   id: '4',
+        //   description: 'SONIA COBZARIU',
+        //   amount: '-£390.',
+        //   neachy: '00',
+        //   card: 'FRIEND',
+        // },
+     
     ],
   },
  
-  {
-    title: 'Feb 17, 2025',
-    price: '£1,569.56',
-    items: [
-      {
-        id: '10',
-        description: 'SHLR LTD',
-        amount: '£2,800..',
-        neachy: '00',
-        card: 'Bill',
-      },
-      {
-        id: '11',
-        description: 'Maninder Singh',
-        amount: '-£5,00.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '12',
-        description: 'LIPSA PIPALIYA',
-        amount: '-£500.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '13',
-        description: '401672 15040477',
-        amount: '-£5,800.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '14',
-        description: '401672 15040477',
-        amount: '-£5,800.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '15',
-        description: 'Non-Sterling',
-        amount: '-£0.',
-        neachy: '03',
-        card: 'Transction fee',
-      },
-      {
-        id: '16',
-        description: 'INT`L 0005147545',
-        amount: '-£10.',
-        neachy: '57',
-        card: 'UBER CANADA/UBEREA',
-      },
-      {
-        id: '17',
-        description: 'Robinjit Singh',
-        amount: '-£500.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '18',
-        description: 'lulian florinel St',
-        amount: '-£3,500.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '19',
-        description: 'NC CONS LTD',
-        amount: '-£2,800.',
-        neachy: '00',
-        card: 'NC CONS LTD',
-      },
-      {
-        id: '20',
-        description: 'Sandeep Singh',
-        amount: '-£4,200.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '21',
-        description: '401672 15040477',
-        amount: '-£7,500.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '22',
-        description: 'lulian Florinel St',
-        amount: '-£1,650.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '23',
-        description: 'lulian Florinel St',
-        amount: '-£2,950.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '24',
-        description: 'lulian Florinel St',
-        amount: '-£1,990.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '25',
-        description: 'Mehakdeep Singh',
-        amount: '-£3,000.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '26',
-        description: 'NC CONS LTD',
-        amount: '-£2,300.',
-        neachy: '00',
-        card: 'NC CONS LTD',
-      },
-      {
-        id: '27',
-        description: 'NC CONS LTD',
-        amount: '-£2,000.',
-        neachy: '00',
-        card: 'NC CONS LTD',
-      },
-      {
-        id: '28',
-        description: 'lulian Florinel St',
-        amount: '-£1,850.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '29',
-        description: 'lulian Florinel St',
-        amount: '-£1,990.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-    ],
-  },
-  {
-    title: 'Feb 15, 2025',
-    price: '£51.87',
-    items: [
-      {
-        id: '30',
-        description: 'CASH RB SCOT FEB15',
-        amount: '-£100.',
-        neachy: '00',
-        card: 'TESCO HA ST @19:13',
-      },
-      {
-        id: '31',
-        description: 'CASH RB SCOT FEB15',
-        amount: '-£200.',
-        neachy: '00',
-        card: 'TESCO HA ST @19:12',
-      },
-      {
-        id: '32',
-        description: 'S',
-        amount: '-£400.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '33',
-        description: 'SINGH J',
-        amount: '£750.',
-        neachy: '00',
-        card: 'FAMILY',
-      },
+  // {
+  //   title: 'Feb 17, 2025',
+  //   price: '£1,569.56',
+  //   items: [
+  //     {
+  //       id: '10',
+  //       description: 'SHLR LTD',
+  //       amount: '£2,800..',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+  //     {
+  //       id: '11',
+  //       description: 'Maninder Singh',
+  //       amount: '-£5,00.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '12',
+  //       description: 'LIPSA PIPALIYA',
+  //       amount: '-£500.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '13',
+  //       description: '401672 15040477',
+  //       amount: '-£5,800.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '14',
+  //       description: '401672 15040477',
+  //       amount: '-£5,800.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '15',
+  //       description: 'Non-Sterling',
+  //       amount: '-£0.',
+  //       neachy: '03',
+  //       card: 'Transction fee',
+  //     },
+  //     {
+  //       id: '16',
+  //       description: 'INT`L 0005147545',
+  //       amount: '-£10.',
+  //       neachy: '57',
+  //       card: 'UBER CANADA/UBEREA',
+  //     },
+  //     {
+  //       id: '17',
+  //       description: 'Robinjit Singh',
+  //       amount: '-£500.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '18',
+  //       description: 'lulian florinel St',
+  //       amount: '-£3,500.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '19',
+  //       description: 'NC CONS LTD',
+  //       amount: '-£2,800.',
+  //       neachy: '00',
+  //       card: 'NC CONS LTD',
+  //     },
+  //     {
+  //       id: '20',
+  //       description: 'Sandeep Singh',
+  //       amount: '-£4,200.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '21',
+  //       description: '401672 15040477',
+  //       amount: '-£7,500.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '22',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£1,650.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '23',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£2,950.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '24',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£1,990.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '25',
+  //       description: 'Mehakdeep Singh',
+  //       amount: '-£3,000.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '26',
+  //       description: 'NC CONS LTD',
+  //       amount: '-£2,300.',
+  //       neachy: '00',
+  //       card: 'NC CONS LTD',
+  //     },
+  //     {
+  //       id: '27',
+  //       description: 'NC CONS LTD',
+  //       amount: '-£2,000.',
+  //       neachy: '00',
+  //       card: 'NC CONS LTD',
+  //     },
+  //     {
+  //       id: '28',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£1,850.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '29',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£1,990.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 15, 2025',
+  //   price: '£51.87',
+  //   items: [
+  //     {
+  //       id: '30',
+  //       description: 'CASH RB SCOT FEB15',
+  //       amount: '-£100.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @19:13',
+  //     },
+  //     {
+  //       id: '31',
+  //       description: 'CASH RB SCOT FEB15',
+  //       amount: '-£200.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @19:12',
+  //     },
+  //     {
+  //       id: '32',
+  //       description: 'S',
+  //       amount: '-£400.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '33',
+  //       description: 'SINGH J',
+  //       amount: '£750.',
+  //       neachy: '00',
+  //       card: 'FAMILY',
+  //     },
      
-    ],
-  },
-  {
-    title: 'Feb 11, 2025',
-    price: '£1.87',
-    items: [
-      {
-        id: '34',
-        description: 'CASH RB SCOT FEB11',
-        amount: '-£100.',
-        neachy: '00',
-        card: 'TESCO HA ST @19:18',
-      },
-      {
-        id: '35',
-        description: 'CASH RB SCOT FEB15',
-        amount: '-£200.',
-        neachy: '00',
-        card: 'TESCO HA ST @19:17',
-      },
-      {
-        id: '36',
-        description: 'Sahil arora',
-        amount: '-£270.',
-        neachy: '00',
-        card: 'Thank you',
-      },
-      {
-        id: '37',
-        description: 'Robinjit Singh',
-        amount: '-£500.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '38',
-        description: '401672 15040477',
-        amount: '-£400.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '39',
-        description: 'LPT CONSTRUCTION I',
-        amount: '-£20.',
-        neachy: '00',
-        card: 'Bill',
-      },
-    ],
-  },
-  {
-    title: 'Feb 10, 2025',
-    price: '£1,491.87',
-    items: [
-      {
-        id: '40',
-        description: 'Robinjit Singh',
-        amount: '-£200.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '41',
-        description: 'Sandeep Singh',
-        amount: '-£210.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '42',
-        description: 'lulian Florinel St',
-        amount: '-£1,800.',
-        neachy: '00',
-        card: 'Sent from Revolut',
-      },
-      {
-        id: '43',
-        description: 'Arpandeep Singh',
-        amount: '-£2,300.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '44',
-        description: 'NC CONS LTD',
-        amount: '-£2,400.',
-        neachy: '00',
-        card: 'BILL',
-      },
-      {
-        id: '45',
-        description: 'Mehakdeep Singh',
-        amount: '-£100.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '46',
-        description: 'SHLR LTD',
-        amount: '-£55.',
-        neachy: '00',
-        card: 'Bill',
-      },
-    ],
-  },
-  {
-    title: 'Feb 8, 2025',
-    price: '£156.87',
-    items: [
-      {
-        id: '47',
-        description: 'CASH RB SCOT FEB08',
-        amount: '-£100.',
-        neachy: '00',
-        card: 'TESCO HA ST @14:39',
-      },
-      {
-        id: '48',
-        description: 'CASH RB SCOT FEB08',
-        amount: '-£100.',
-        neachy: '00',
-        card: 'TESCO HA ST @14:36',
-      },
-      {
-        id: '49',
-        description: '401672 15040477',
-        amount: '-£400.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '50',
-        description: 'HR03 BUILDS LIMTE',
-        amount: '-£852.',
-        neachy: '35',
-        card: 'WAGES',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 11, 2025',
+  //   price: '£1.87',
+  //   items: [
+  //     {
+  //       id: '34',
+  //       description: 'CASH RB SCOT FEB11',
+  //       amount: '-£100.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @19:18',
+  //     },
+  //     {
+  //       id: '35',
+  //       description: 'CASH RB SCOT FEB15',
+  //       amount: '-£200.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @19:17',
+  //     },
+  //     {
+  //       id: '36',
+  //       description: 'Sahil arora',
+  //       amount: '-£270.',
+  //       neachy: '00',
+  //       card: 'Thank you',
+  //     },
+  //     {
+  //       id: '37',
+  //       description: 'Robinjit Singh',
+  //       amount: '-£500.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '38',
+  //       description: '401672 15040477',
+  //       amount: '-£400.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '39',
+  //       description: 'LPT CONSTRUCTION I',
+  //       amount: '-£20.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 10, 2025',
+  //   price: '£1,491.87',
+  //   items: [
+  //     {
+  //       id: '40',
+  //       description: 'Robinjit Singh',
+  //       amount: '-£200.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '41',
+  //       description: 'Sandeep Singh',
+  //       amount: '-£210.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '42',
+  //       description: 'lulian Florinel St',
+  //       amount: '-£1,800.',
+  //       neachy: '00',
+  //       card: 'Sent from Revolut',
+  //     },
+  //     {
+  //       id: '43',
+  //       description: 'Arpandeep Singh',
+  //       amount: '-£2,300.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '44',
+  //       description: 'NC CONS LTD',
+  //       amount: '-£2,400.',
+  //       neachy: '00',
+  //       card: 'BILL',
+  //     },
+  //     {
+  //       id: '45',
+  //       description: 'Mehakdeep Singh',
+  //       amount: '-£100.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '46',
+  //       description: 'SHLR LTD',
+  //       amount: '-£55.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 8, 2025',
+  //   price: '£156.87',
+  //   items: [
+  //     {
+  //       id: '47',
+  //       description: 'CASH RB SCOT FEB08',
+  //       amount: '-£100.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @14:39',
+  //     },
+  //     {
+  //       id: '48',
+  //       description: 'CASH RB SCOT FEB08',
+  //       amount: '-£100.',
+  //       neachy: '00',
+  //       card: 'TESCO HA ST @14:36',
+  //     },
+  //     {
+  //       id: '49',
+  //       description: '401672 15040477',
+  //       amount: '-£400.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '50',
+  //       description: 'HR03 BUILDS LIMTE',
+  //       amount: '-£852.',
+  //       neachy: '35',
+  //       card: 'WAGES',
+  //     },
       
-    ],
-  },
-  {
-    title: 'Feb 7, 2025',
-    price: '£4.52',
-    items: [
-      {
-        id: '51',
-        description: 'Non-Sterling',
-        amount: '-£0.',
-        neachy: '12',
-        card: 'Transactions Fee',
-      },
-      {
-        id: '52',
-        description: 'INT`L0038338616',
-        amount: '-£4.',
-        neachy: '59',
-        card: 'MATCHERINO',
-      },
-     
-      
-    ],
-  },
-  {
-    title: 'Feb 6, 2025',
-    price: '£9.23',
-    items: [
-      {
-        id: '53',
-        description: 'SHLR Ltd',
-        amount: '-£1,380.',
-        neachy: '00 ',
-        card: 'Bill',
-      },
-      {
-        id: '54',
-        description: 'komalpreet Singh',
-        amount: '-£120.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '55',
-        description: 'LPT CONSTRUCTION I',
-        amount: '-£50.',
-        neachy: '00',
-        card: 'Bill',
-      },
-      
-    ],
-  },
-  {
-    title: 'Feb 5, 2025',
-    price: '£1,559.23',
-    items: [
-      {
-        id: '56',
-        description: 'Karandeep singh',
-        amount: '-£50.',
-        neachy: '00',
-        card: 'Personal',
-      },
-      {
-        id: '57',
-        description: '401672 15040477',
-        amount: '-£400.',
-        neachy: '00',
-        card: 'INTERNET TRANSFEER',
-      },
-      {
-        id: '58',
-        description: 'Mehakdeep Singh',
-        amount: '-£680.',
-        neachy: '00',
-        card: 'Family',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 7, 2025',
+  //   price: '£4.52',
+  //   items: [
+  //     {
+  //       id: '51',
+  //       description: 'Non-Sterling',
+  //       amount: '-£0.',
+  //       neachy: '12',
+  //       card: 'Transactions Fee',
+  //     },
+  //     {
+  //       id: '52',
+  //       description: 'INT`L0038338616',
+  //       amount: '-£4.',
+  //       neachy: '59',
+  //       card: 'MATCHERINO',
+  //     },
      
       
-    ],
-  },
-  {
-    title: 'Feb 4, 2025',
-    price: '£2,689.23',
-    items: [
-      {
-        id: '59',
-        description: 'HR03 BUILDS LIMTE',
-        amount: '-£2,685.',
-        neachy: '20',
-        card: 'WAGES',
-      },
-      {
-        id: '70',
-        description: 'Sabrina ciurar',
-        amount: '-£500.',
-        neachy: '00',
-        card: 'Friend',
-      },
-      {
-        id: '71',
-        description: 'SHLR Ltd',
-        amount: '-£2,000   .',
-        neachy: '00 ',
-        card: 'Bill',
-      },
-      {
-        id: '72',
-        description: 'Robinjit Singh',
-        amount: '-£2,500.',
-        neachy: '00',
-        card: 'Karandeep Singh',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 6, 2025',
+  //   price: '£9.23',
+  //   items: [
+  //     {
+  //       id: '53',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£1,380.',
+  //       neachy: '00 ',
+  //       card: 'Bill',
+  //     },
+  //     {
+  //       id: '54',
+  //       description: 'komalpreet Singh',
+  //       amount: '-£120.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '55',
+  //       description: 'LPT CONSTRUCTION I',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+      
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 5, 2025',
+  //   price: '£1,559.23',
+  //   items: [
+  //     {
+  //       id: '56',
+  //       description: 'Karandeep singh',
+  //       amount: '-£50.',
+  //       neachy: '00',
+  //       card: 'Personal',
+  //     },
+  //     {
+  //       id: '57',
+  //       description: '401672 15040477',
+  //       amount: '-£400.',
+  //       neachy: '00',
+  //       card: 'INTERNET TRANSFEER',
+  //     },
+  //     {
+  //       id: '58',
+  //       description: 'Mehakdeep Singh',
+  //       amount: '-£680.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
      
       
-    ],
-  },
-  {
-    title: 'Jan 28, 2025',
-    price: '£4.03',
-    items: [
-      {
-        id: '73',
-        description: 'Gursharan kaur',
-        amount: '-£250.',
-        neachy: '20',
-        card: 'Friend',
-      },
-      {
-        id: '74',
-        description: 'VKK GLOBAL LTD',
-        amount: '-£145.',
-        neachy: '00',
-        card: 'VKK GLOBAL LTD',
-      },
-      {
-        id: '75',
-        description: 'SHLR Ltd',
-        amount: '-£285.',
-        neachy: '00',
-        card: 'Bill',
-      },
-      {
-        id: '76',
-        description: 'HR03 BULDS LIMTE ',
-        amount: '-£387.',
-        neachy: '56',
-        card: 'WAGES',
-      },
-      
-    ],
-  },
-  {
-    title: 'Jan 22, 2025',
-    price: '£6.47',
-    items: [
-      {
-        id: '77',
-        description: 'Sandeep Singh',
-        amount: '-£200.',
-        neachy: '00',
-        card: 'Family',
-      },
-      {
-        id: '78',
-        description: 'VKK GLOBAL LTD',
-        amount: '-£200.',
-        neachy: '00',
-        card: 'Wages',
-      },
-      {
-        id: '79',
-        description: 'SHLR Ltd',
-        amount: '-£10.',
-        neachy: '00',
-        card: 'Bill',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 4, 2025',
+  //   price: '£2,689.23',
+  //   items: [
+  //     {
+  //       id: '59',
+  //       description: 'HR03 BUILDS LIMTE',
+  //       amount: '-£2,685.',
+  //       neachy: '20',
+  //       card: 'WAGES',
+  //     },
+  //     {
+  //       id: '70',
+  //       description: 'Sabrina ciurar',
+  //       amount: '-£500.',
+  //       neachy: '00',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '71',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£2,000   .',
+  //       neachy: '00 ',
+  //       card: 'Bill',
+  //     },
+  //     {
+  //       id: '72',
+  //       description: 'Robinjit Singh',
+  //       amount: '-£2,500.',
+  //       neachy: '00',
+  //       card: 'Karandeep Singh',
+  //     },
      
       
-    ],
-  },
-  {
-    title: 'Jan 21, 2025',
-    price: '£16.47',
-    items: [
-      {
-        id: '80',
-        description: 'SHLR Ltd',
-        amount: '-£180.',
-        neachy: '00',
-        card: 'Bill',
-      },
-      {
-        id: '81',
-        description: 'ARPANDEEP SINGH',
-        amount: '-£195.',
-        neachy: '00',
-        card: 'Family',
-      },
-     
+  //   ],
+  // },
+  // {
+  //   title: 'Jan 28, 2025',
+  //   price: '£4.03',
+  //   items: [
+  //     {
+  //       id: '73',
+  //       description: 'Gursharan kaur',
+  //       amount: '-£250.',
+  //       neachy: '20',
+  //       card: 'Friend',
+  //     },
+  //     {
+  //       id: '74',
+  //       description: 'VKK GLOBAL LTD',
+  //       amount: '-£145.',
+  //       neachy: '00',
+  //       card: 'VKK GLOBAL LTD',
+  //     },
+  //     {
+  //       id: '75',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£285.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+  //     {
+  //       id: '76',
+  //       description: 'HR03 BULDS LIMTE ',
+  //       amount: '-£387.',
+  //       neachy: '56',
+  //       card: 'WAGES',
+  //     },
+      
+  //   ],
+  // },
+  // {
+  //   title: 'Jan 22, 2025',
+  //   price: '£6.47',
+  //   items: [
+  //     {
+  //       id: '77',
+  //       description: 'Sandeep Singh',
+  //       amount: '-£200.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
+  //     {
+  //       id: '78',
+  //       description: 'VKK GLOBAL LTD',
+  //       amount: '-£200.',
+  //       neachy: '00',
+  //       card: 'Wages',
+  //     },
+  //     {
+  //       id: '79',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£10.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
      
       
-    ],
-  },
-  {
-    title: 'Jan 19, 2025',
-    price: '£1.47',
-    items: [
-      {
-        id: '82',
-        description: 'SHLR Ltd',
-        amount: '-£71.',
-        neachy: '00',
-        card: 'Bill',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Jan 21, 2025',
+  //   price: '£16.47',
+  //   items: [
+  //     {
+  //       id: '80',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£180.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+  //     {
+  //       id: '81',
+  //       description: 'ARPANDEEP SINGH',
+  //       amount: '-£195.',
+  //       neachy: '00',
+  //       card: 'Family',
+  //     },
      
      
       
-    ],
-  },
-  {
-    title: 'Jan 18, 2025',
-    price: '£72.47',
-    items: [
-      {
-        id: '83',
-        description: 'ARPANDEEP SINGH',
-        amount: '-£70.',
-        neachy: '00',
-        card: 'FRIEND',
-      },
+  //   ],
+  // },
+  // {
+  //   title: 'Jan 19, 2025',
+  //   price: '£1.47',
+  //   items: [
+  //     {
+  //       id: '82',
+  //       description: 'SHLR Ltd',
+  //       amount: '-£71.',
+  //       neachy: '00',
+  //       card: 'Bill',
+  //     },
+     
+     
+      
+  //   ],
+  // },
+  // {
+  //   title: 'Jan 18, 2025',
+  //   price: '£72.47',
+  //   items: [
+  //     {
+  //       id: '83',
+  //       description: 'ARPANDEEP SINGH',
+  //       amount: '-£70.',
+  //       neachy: '00',
+  //       card: 'FRIEND',
+  //     },
      
 
      
      
       
-    ],
-  },
+  //   ],
+  // },
  
 
   // {
@@ -1176,7 +1164,7 @@ const onSheetDrag = (value) => {
           </TouchableOpacity>
           <View style={{ justifyContent: 'center', marginHorizontal: 10,alignItems:'center',width:'80%', }}>
             <Text style={{ color: Black, fontSize: 16,fontWeight:'500' }}>BANK A/C</Text>
-            <Text style={{ color: Black,fontWeight:'500' }}>40-16-63 11198726</Text>
+            <Text style={{ color: Black,fontWeight:'500' }}>40-11-93  02038625</Text>
           </View>
         </View>
         <View
@@ -1190,7 +1178,7 @@ const onSheetDrag = (value) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£1.31</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£1.93</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>
@@ -1298,23 +1286,23 @@ const onSheetDrag = (value) => {
           </View>
         </View>
       </View>
-      {/* <View style={{height:100,marginVertical:20,marginHorizontal:10, justifyContent:'center'}}>
+      <View style={{height:100,marginVertical:20,marginHorizontal:10, justifyContent:'center'}}>
    <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
     <Text style={{color:Black}}>Available balance</Text>
-    <Text style={{color:Black}}>£49.30</Text>
+    <Text style={{color:Black}}>£1.93</Text>
 
    </View>
    <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
     <Text style={{color:Black}}>Balance at</Text>
-    <Text style={{color:Black}}>16:03 GMT on 16 Dec</Text>
+    <Text style={{color:Black}}>12:57 GMT on 6 MAR</Text>
 
    </View>
    <View style={{flexDirection:'row',justifyContent:'space-between',}}>
     <Text style={{color:'#CDD4D5'}}>Available balance</Text>
-    <Text style={{color:Black}}>2024</Text>
+    <Text style={{color:Black}}>2025</Text>
 
    </View>
-   </View> */}
+   </View>
    <RBSheet
   ref={refRBSheet}
   closeOnPressMask={true}
