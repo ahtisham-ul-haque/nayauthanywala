@@ -24,6 +24,7 @@ import AccountDetailsScreen from '../screens/AccountDetails/AccountDetails';
 import CurrenciesScreen from '../screens/Curencies/CurrenciesScreen';
 import ManageCard from '../screens/ManageCaed/ManageCard';
 import Statement from '../screens/StateMent/Statement';
+import SettingsScreen from '../screens/Setting';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -118,6 +119,12 @@ const MainNavigation = () => {
           component={BankAccount}
           options={{ headerShown: false }}
         />
+         <Stack.Screen
+          name="SettingsScreen"
+          component={SettingsScreen}
+          options={{ headerShown: false }}
+        />
+        
          <Stack.Screen
           name="Paytransfer"
           component={Paytransfer}

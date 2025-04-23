@@ -6,6 +6,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { SafeAreaView } from 'react-native-safe-area-context';
 const DATA = [
   {
+    name: 'Global Money Account',
+    icon: 'globe-outline',
+    type: 'Ionicons',
+  },
+  {
     name: 'Credit Card',
     icon: 'wallet-outline',
     type: 'Ionicons',
@@ -98,7 +103,8 @@ const DashBoard = ({navigation}) => {
             }}>
             <Icon name="person-outline" color={'#181818'} size={20} />
           </View>
-          <View
+          <TouchableOpacity
+          onPress={()=>navigation.navigate("SettingsScreen")}
             style={{
               height: 50,
               width: 50,
@@ -109,7 +115,7 @@ const DashBoard = ({navigation}) => {
               justifyContent: 'center',
             }}>
             <Icon name="notifications-outline" color={'#181818'} size={20} />
-          </View>
+          </TouchableOpacity>
         </View>
         
         {/* Text and Title */}
@@ -138,11 +144,12 @@ const DashBoard = ({navigation}) => {
           borderBottomWidth: 0.5,
       
         }}>
-        <Text style={{ color: '#181818', fontSize: 16 }}>BANK A/C </Text>
+        <Text style={{ color: '#181818', fontSize: 16 }}>BASIC BANK </Text>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ color: '#989898', fontSize: 16 }}>40-11-93</Text>
+      
+          <Text style={{ color: '#989898', fontSize: 16 }}>40-22-22</Text>
           <Text style={{ color: '#989898', fontSize: 16, paddingLeft: 7 }}>
-          02038625  
+          41721143  
           </Text>
         </View>
         <Text
@@ -152,7 +159,7 @@ const DashBoard = ({navigation}) => {
             textAlign: 'right',
             marginRight: 10,
           }}>
-         £1.93
+         £0.50
         </Text>
       </View>
       </TouchableOpacity>
