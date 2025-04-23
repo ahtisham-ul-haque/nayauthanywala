@@ -46,11 +46,20 @@ const SettingsScreen = ({ navigation }: any) => {
               shadowRadius: 3.84,
 
               elevation: 5,
-              alignItems: 'center',
               paddingVertical: 10,
+              flexDirection:'row',
+              alignItems:'center',
+              justifyContent:'space-between',
+              paddingHorizontal:20
             }}>
-            <Text style={styles.name}>Francesca-Luminita Mihai</Text>
+              <View>
+
+            <Text style={styles.name}> MAH JABEEN</Text>
             <Text style={styles.subText}>Update your personal details</Text>
+            </View>
+<View>
+<Icons name='chevron-forward-outline' color={"#000"} size={20}/>
+</View>
           </View>
         </View>
         {/* Section: Documents and Messages */}

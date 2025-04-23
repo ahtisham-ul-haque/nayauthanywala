@@ -1,55 +1,183 @@
-import { StyleSheet, Text, View, FlatList,Animated,PanResponder,TouchableOpacity, Dimensions,Button } from 'react-native';
-import React, { useEffect, useMemo, useRef,useState } from 'react';
-import { Black, White } from '../../utils/Color';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Animated,
+  PanResponder,
+  TouchableOpacity,
+  Dimensions,
+  Button,
+} from 'react-native';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Black, LightGrey, White } from '../../utils/Color';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const transactions = [
   {
-    title: 'Mar 10, 2025',
-    price: '£0.50',
+    title: 'Pending',
     items: [
       {
         id: '1',
-        description: 'MOON COFFEE AND RE  ',
-        amount: '-£10.',
+        description: 'FK Global Services  ',
+        amount: '-£1,050.',
         neachy: '00',
+        card: 'llford GB',
+        date: 'Apr 23, 2025',
+        iconname: 'wallet-outline',
+      },
+      {
+        id: '1',
+        description: 'FK Global Services  ',
+        amount: '-£4,998.',
+        neachy: '00',
+        card: 'llford GB',
+        date: 'Apr 23, 2025',
+        iconname: 'wallet-outline',
+      },
+      {
+        id: '1',
+        description: 'INTL CARD 99999999  ',
+        amount: '-£8.',
+        neachy: '998',
+        card: 'llford GB',
+        date: 'Apr 23, 2025',
+        iconname: 'wallet-outline',
+      },
+    ],
+  },
+  {
+    title: 'Apr  23, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'WOLVES SERVICE LTD   ',
+        amount: '-£35.',
+        neachy: '00',
+        card: 'Services',
+      },
+    ],
+  },
+  {
+    title: 'Apr  22, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'ADVICE CONFIRMS   ',
+        amount: '£6,094.',
+        neachy: '98',
+        card: 'RBS22045KHAAJJ5S',
+        GREEN: true,
+      },
+    ],
+  },
+  {
+    title: 'Mar  21, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'WOLVES SERVICE LTD   ',
+        amount: '-£6.',
+        neachy: '57',
+        card: 'Services',
+      },
+      {
+        id: '1',
+        description: 'BEDSCLICK LT   ',
+        amount: '£7.',
+        neachy: '00',
+        card: 'employee',
+        GREEN: true,
+      },
+    ],
+  },
+  {
+    title: 'Mar 10, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'NISHA LOCAL ',
+        amount: '-£4.',
+        neachy: '99',
         card: 'LONDON',
       },
     ],
   },
   {
     title: 'Mar 07, 2025',
-    price: '£10.50',
     items: [
       {
         id: '1',
-        description: 'CASH IN P.O MAR07 ',
-        amount: '£10.',
+        description: 'CASH IN P.O MAR07',
+        amount: '£5.',
         neachy: '00',
-        card: '161A BOW ROA@16:55',
-        GREEN:true
+        card: '161A BOW ROA@16:54',
+        GREEN: true,
       },
     ],
   },
   {
-    title: 'Feb 25, 2025',
-    price: '£0.50',
+    title: 'Feb 18, 2025',
     items: [
       {
         id: '1',
-        description: 'TOMA BIMBAI',
-        amount: '-£9.',
-        neachy: '50',
-        card: 'FRIEND',
+        description: 'TOMA',
+        amount: '£2.',
+        neachy: '00',
+        card: 'faimly',
+        GREEN: true,
       },
     ],
   },
-  
+  {
+    title: 'Feb 17, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'TFL TRAVEL CH',
+        amount: '-£1.',
+        neachy: '75',
+        card: 'TFLGOV.UK/CP',
+      },
+    ],
+  },
+  {
+    title: 'Feb 11, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'MRS MAHBUBA BEGUM',
+        amount: '-£1.',
+        neachy: '75',
+        card: 'RETURN',
+      },
+      {
+        id: '1',
+        description: 'TOMA R ',
+        amount: '£6.',
+        neachy: '00',
+        card: 'FAMILY',
+        GREEN: true,
+      },
+    ],
+  },
+  {
+    title: 'Feb 10, 2025',
+    items: [
+      {
+        id: '1',
+        description: 'INT 0054598575',
+        amount: '-£8.',
+        neachy: '99',
+        card: 'APPLE.COM/BILL',
+      },
+    ],
+  },
 ];
-const height = Dimensions.get('screen').height
-const BankAccount = ({navigation}) => {
+const height = Dimensions.get('screen').height;
+const BankAccount = ({ navigation }) => {
   useEffect(() => {
     // RBSheet ko automatically open karne ke liye
     refRBSheet.current.open();
@@ -57,46 +185,48 @@ const BankAccount = ({navigation}) => {
   const panY = useRef(new Animated.Value(300)).current; // Initial position set to 300 (partially visible)
   const refRBSheet = useRef();
 
-const panResponder = useRef(
-  PanResponder.create({
-    onStartShouldSetPanResponder: () => true,
-    onMoveShouldSetPanResponder: () => true,
-    onPanResponderMove: (_, gestureState) => {
-      // Y position ko update karte waqt ensure karte hain ke sheet 300 ke niche na jaye (maximum limit)
-      const newPanY = Math.max(300, gestureState.dy); // 300 ek limit hai, jahan sheet ruk jayegi
-      panY.setValue(newPanY); // Y position ko update karte hain
-    },
-    onPanResponderRelease: (_, gestureState) => {
-      const { dy } = gestureState;
+  const panResponder = useRef(
+    PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: () => true,
+      onPanResponderMove: (_, gestureState) => {
+        // Y position ko update karte waqt ensure karte hain ke sheet 300 ke niche na jaye (maximum limit)
+        const newPanY = Math.max(300, gestureState.dy); // 300 ek limit hai, jahan sheet ruk jayegi
+        panY.setValue(newPanY); // Y position ko update karte hain
+      },
+      onPanResponderRelease: (_, gestureState) => {
+        const { dy } = gestureState;
 
-      // Adjust position when release based on movement
-      if (dy > 250) {
-        // If swipe is down, close the sheet to 300 (partial close)
-        Animated.spring(panY, {
-          toValue: 300, // Partial close
-          useNativeDriver: true,
-          stiffness: 200,
-        }).start();
-      } else {
-        // If swipe is up, open the sheet to its maximum visible position
-        Animated.spring(panY, {
-          toValue: 0, // Fully open
-          useNativeDriver: true,
-          stiffness: 200,
-        }).start();
-      }
-    },
-  })
-).current;
-const [sheetHeight, setSheetHeight] = useState(Dimensions.get('screen').height / 1.2);
+        // Adjust position when release based on movement
+        if (dy > 250) {
+          // If swipe is down, close the sheet to 300 (partial close)
+          Animated.spring(panY, {
+            toValue: 300, // Partial close
+            useNativeDriver: true,
+            stiffness: 200,
+          }).start();
+        } else {
+          // If swipe is up, open the sheet to its maximum visible position
+          Animated.spring(panY, {
+            toValue: 0, // Fully open
+            useNativeDriver: true,
+            stiffness: 200,
+          }).start();
+        }
+      },
+    }),
+  ).current;
+  const [sheetHeight, setSheetHeight] = useState(
+    Dimensions.get('screen').height / 1.2,
+  );
 
-const onSheetDrag = (value) => {
-  if (value === 'expand') {
-    setSheetHeight(Dimensions.get('screen').height); 
-  } else if (value === 'collapse') {
-    setSheetHeight(Dimensions.get('screen').height / 1); 
-  }
-};
+  const onSheetDrag = value => {
+    if (value === 'expand') {
+      setSheetHeight(Dimensions.get('screen').height);
+    } else if (value === 'collapse') {
+      setSheetHeight(Dimensions.get('screen').height / 1);
+    }
+  };
   const renderSection = ({ item, index }) => (
     <View style={styles.section}>
       <View
@@ -114,7 +244,7 @@ const onSheetDrag = (value) => {
         data={item.items}
         renderItem={renderItem}
         keyExtractor={item => item.id}
-      scrollEnabled={true}
+        scrollEnabled={true}
       />
     </View>
   );
@@ -137,6 +267,14 @@ const onSheetDrag = (value) => {
           {item.amount}
           <Text style={{ fontSize: 13 }}>{item?.neachy}</Text>
         </Text>
+        {item?.iconname &&
+        
+        <View style={{marginVertical:5, backgroundColor: LightGrey,alignItems:'center',justifyContent:'center', paddingHorizontal: 5,flexDirection:'row' }}>
+        <Icon name={item?.iconname} size={20} color={Black} />
+          <Text style={{ color: '#000',textAlign:'center',paddingLeft:6,fontSize:13 }}>{item?.date}</Text>
+        </View>
+        }
+
       </View>
     </View>
   );
@@ -151,12 +289,24 @@ const onSheetDrag = (value) => {
           paddingHorizontal: 20,
         }}>
         <View style={{ height: '100%', flexDirection: 'row' }}>
-          <TouchableOpacity onPress={()=>navigation.goBack()} style={{ alignItems: 'center', justifyContent: 'center' }}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            style={{ alignItems: 'center', justifyContent: 'center' }}>
             <Icon name="arrow-back-outline" size={25} color={Black} />
           </TouchableOpacity>
-          <View style={{ justifyContent: 'center', marginHorizontal: 10,alignItems:'center',width:'80%', }}>
-            <Text style={{ color: Black, fontSize: 16,fontWeight:'500' }}>BASIC BANK</Text>
-            <Text style={{ color: Black,fontWeight:'500' }}>40-22-22  41721143</Text>
+          <View
+            style={{
+              justifyContent: 'center',
+              marginHorizontal: 10,
+              alignItems: 'center',
+              width: '80%',
+            }}>
+            <Text style={{ color: Black, fontSize: 16, fontWeight: '500' }}>
+              BASIC BANK
+            </Text>
+            <Text style={{ color: Black, fontWeight: '500' }}>
+            40-11-93 21886061
+            </Text>
           </View>
         </View>
         <View
@@ -170,7 +320,7 @@ const onSheetDrag = (value) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£0.50</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£4.73</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>
@@ -278,70 +428,85 @@ const onSheetDrag = (value) => {
           </View>
         </View>
       </View>
-      <View style={{height:100,marginVertical:20,marginHorizontal:10, justifyContent:'center'}}>
-   <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
-    {/* <Text style={{color:Black}}>Available balance</Text>
+      <View
+        style={{
+          height: 100,
+          marginVertical: 20,
+          marginHorizontal: 10,
+          justifyContent: 'center',
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginTop: 10,
+          }}>
+          {/* <Text style={{color:Black}}>Available balance</Text>
     <Text style={{color:Black}}>£1.93</Text> */}
-
-   </View>
-   <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
-    {/* <Text style={{color:Black}}>Balance at</Text> */}
-    {/* <Text style={{color:Black}}>12:57 GMT on 6 MAR</Text> */}
-
-   </View>
-   <View style={{flexDirection:'row',justifyContent:'space-between',}}>
-    {/* <Text style={{color:'#CDD4D5'}}>Available balance</Text>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginTop: 10,
+          }}>
+          {/* <Text style={{color:Black}}>Balance at</Text> */}
+          {/* <Text style={{color:Black}}>12:57 GMT on 6 MAR</Text> */}
+        </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          {/* <Text style={{color:'#CDD4D5'}}>Available balance</Text>
     <Text style={{color:Black}}>2025</Text> */}
+        </View>
+      </View>
+      <RBSheet
+        ref={refRBSheet}
+        closeOnPressMask={true}
+        openDuration={0}
+        closeOnDragDown={true}
+        closeOnPressBack={false}
+        draggable={true}
+        height={390} // specify the height
+        minClosingHeight={0} // set it to 0 for full closure
+        dragFromTopOnly={false}
+        customStyles={{
+          wrapper: {
+            backgroundColor: 'transparent',
+          },
+          draggableIcon: {
+            backgroundColor: '#EDEDED',
+            width: 80,
+            alignSelf: 'center',
+          },
+          container: {
+            height: Dimensions.get('screen').height / 2.2, // match this height
+          },
+        }}
+        onDragEnd={() => {
+          // Ensure the sheet doesn't go above the top
+          if (refRBSheet.current.getCurrentPosition() < 0) {
+            refRBSheet.current.setState({ height: 690 });
+          }
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 10,
+          }}>
+          <Text style={{ color: 'black', fontWeight: '800', fontSize: 18 }}>
+            Transactions
+          </Text>
+          <Icon name="search" color={'black'} size={22} />
+        </View>
+        <FlatList
+          data={transactions}
+          renderItem={renderSection}
+          keyExtractor={(item, index) => index.toString()}
+          contentContainerStyle={{ backgroundColor: 'white' }}
+        />
+      </RBSheet>
 
-   </View>
-   </View>
-   <RBSheet
-  ref={refRBSheet}
-  closeOnPressMask={true}
-  openDuration={0}
-  closeOnDragDown={true}
-  closeOnPressBack={false}
-  draggable={true}
-  height={390} // specify the height
-  minClosingHeight={0} // set it to 0 for full closure
-  dragFromTopOnly={false}
-  customStyles={{
-    wrapper: {
-      backgroundColor: 'transparent',
-    },
-    draggableIcon: {
-      backgroundColor: '#EDEDED',
-      width: 80,
-      alignSelf: 'center',
-    },
-    container: {
-      height:Dimensions.get('screen').height/2.2, // match this height
-    },
-  }}
-  onDragEnd={() => {
-    // Ensure the sheet doesn't go above the top
-    if (refRBSheet.current.getCurrentPosition() < 0) {
-      refRBSheet.current.setState({ height: 690 });
-    }
-  }}
->
-  <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:10}}>
-    <Text style={{color:'black', fontWeight:'800', fontSize:18}}>Transactions</Text>
-    <Icon name='search' color={'black'} size={22}/>
-  </View>
-  <FlatList
-    data={transactions}
-    renderItem={renderSection}
-    keyExtractor={(item, index) => index.toString()}
-    contentContainerStyle={{ backgroundColor: 'white' }}
-  />
-</RBSheet>
-
-      
-    
-     
       {/* </View> */}
-
     </SafeAreaView>
   );
 };
@@ -396,20 +561,20 @@ const styles = StyleSheet.create({
     position: 'relative',
     alignItems: 'center',
   },
- 
+
   bottomSheet: {
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     backgroundColor: 'white',
-   
+
     elevation: 5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
     shadowRadius: 10,
-    zIndex:999
+    zIndex: 999,
   },
   handle: {
     width: 60,

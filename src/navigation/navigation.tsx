@@ -102,6 +102,7 @@ const MainNavigation = () => {
           component={Loding}
           options={{ headerShown: false }}
         />
+        
         <Stack.Screen
           name="Login"
           component={Login}
