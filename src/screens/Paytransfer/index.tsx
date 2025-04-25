@@ -138,7 +138,7 @@ const Paytransfer = ({ navigation }: any) => {
         </View>
         <View style={{ backgroundColor: White, marginVertical: 10 }}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('From')}
+            // onPress={() => navigation.navigate('From')}
             style={{
               justifyContent: 'space-between',
               flexDirection: 'row',

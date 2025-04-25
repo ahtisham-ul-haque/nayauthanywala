@@ -17,164 +17,252 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 const transactions = [
   {
-    title: 'Pending',
+    title: 'Apr 25, 2025',
+    price: '£0.48',
     items: [
       {
         id: '1',
-        description: 'FK Global Services  ',
-        amount: '-£1,050.',
-        neachy: '00',
-        card: 'llford GB',
-        date: 'Apr 23, 2025',
-        iconname: 'wallet-outline',
+        description: 'NISA LOCAL ',
+        amount: '-£2.',
+        neachy: '34',
+        card: 'LONDON',
+        //         date: 'Apr 23, 2025',
+        // iconname: 'wallet-outline',
       },
       {
         id: '1',
-        description: 'FK Global Services  ',
-        amount: '-£4,998.',
-        neachy: '00',
-        card: 'llford GB',
-        date: 'Apr 23, 2025',
-        iconname: 'wallet-outline',
-      },
-      {
-        id: '1',
-        description: 'INTL CARD 99999999  ',
-        amount: '-£8.',
-        neachy: '998',
-        card: 'llford GB',
-        date: 'Apr 23, 2025',
-        iconname: 'wallet-outline',
+        description: 'NISA LOCAL ',
+        amount: '-£22.',
+        neachy: '68',
+        card: 'LONDON',
+        //         date: 'Apr 23, 2025',
+        // iconname: 'wallet-outline',
       },
     ],
   },
+  {
+    title: 'Apr 24, 2025',
+    price: '£25.50',
+    items: [
+      {
+        id: '1',
+        description: 'Mr Gabor Barany',
+        amount: '-£10.',
+        neachy: '00',
+        card: 'Consultant',
+      
+      },
+      
+     
+    ],
+  },
+  // {
+  //   title: 'Pending',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'FK Global Services  ',
+  //       amount: '-£1,050.',
+  //       neachy: '00',
+  //       card: 'llford GB',
+  //       date: 'Apr 23, 2025',
+  //       iconname: 'wallet-outline',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'FK Global Services  ',
+  //       amount: '-£4,998.',
+  //       neachy: '00',
+  //       card: 'llford GB',
+  //       date: 'Apr 23, 2025',
+  //       iconname: 'wallet-outline',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'INTL CARD 99999999  ',
+  //       amount: '-£8.',
+  //       neachy: '998',
+  //       card: 'llford GB',
+  //       date: 'Apr 23, 2025',
+  //       iconname: 'wallet-outline',
+  //     },
+  //   ],
+  // },
   {
     title: 'Apr  23, 2025',
+    price: '£35.50',
     items: [
       {
         id: '1',
-        description: 'WOLVES SERVICE LTD   ',
-        amount: '-£35.',
+        description: 'HARMEET KAUR     ',
+        amount: '£35.',
         neachy: '00',
-        card: 'Services',
-      },
-    ],
-  },
-  {
-    title: 'Apr  22, 2025',
-    items: [
-      {
-        id: '1',
-        description: 'ADVICE CONFIRMS   ',
-        amount: '£6,094.',
-        neachy: '98',
-        card: 'RBS22045KHAAJJ5S',
-        GREEN: true,
-      },
-    ],
-  },
-  {
-    title: 'Mar  21, 2025',
-    items: [
-      {
-        id: '1',
-        description: 'WOLVES SERVICE LTD   ',
-        amount: '-£6.',
-        neachy: '57',
-        card: 'Services',
-      },
-      {
-        id: '1',
-        description: 'BEDSCLICK LT   ',
-        amount: '£7.',
-        neachy: '00',
-        card: 'employee',
-        GREEN: true,
+        card: 'other',
+        GREEN:true
       },
     ],
   },
   {
     title: 'Mar 10, 2025',
+    price: '£0.50',
     items: [
       {
         id: '1',
-        description: 'NISHA LOCAL ',
-        amount: '-£4.',
-        neachy: '99',
+        description: 'MOON COFFEEAND RE',
+        amount: '-£10.',
+        neachy: '00',
         card: 'LONDON',
       },
+    
+     
     ],
   },
   {
-    title: 'Mar 07, 2025',
+    title: 'Mar 7, 2025',
+    price: '£10.50',
     items: [
       {
         id: '1',
         description: 'CASH IN P.O MAR07',
-        amount: '£5.',
+        amount: '£10.',
         neachy: '00',
-        card: '161A BOW ROA@16:54',
-        GREEN: true,
+        card: '161A BOW ROA@16:55 ',
+        GREEN:true
       },
+    
+     
     ],
   },
   {
-    title: 'Feb 18, 2025',
+    title: 'Feb 25, 2025',
+    price: '£0.50',
     items: [
       {
         id: '1',
-        description: 'TOMA',
-        amount: '£2.',
-        neachy: '00',
-        card: 'faimly',
-        GREEN: true,
+        description: 'TOMA BIMBAI',
+        amount: '-£9.',
+        neachy: '50',
+        card: 'FRIEND',
       },
+    
+     
     ],
   },
-  {
-    title: 'Feb 17, 2025',
-    items: [
-      {
-        id: '1',
-        description: 'TFL TRAVEL CH',
-        amount: '-£1.',
-        neachy: '75',
-        card: 'TFLGOV.UK/CP',
-      },
-    ],
-  },
-  {
-    title: 'Feb 11, 2025',
-    items: [
-      {
-        id: '1',
-        description: 'MRS MAHBUBA BEGUM',
-        amount: '-£1.',
-        neachy: '75',
-        card: 'RETURN',
-      },
-      {
-        id: '1',
-        description: 'TOMA R ',
-        amount: '£6.',
-        neachy: '00',
-        card: 'FAMILY',
-        GREEN: true,
-      },
-    ],
-  },
-  {
-    title: 'Feb 10, 2025',
-    items: [
-      {
-        id: '1',
-        description: 'INT 0054598575',
-        amount: '-£8.',
-        neachy: '99',
-        card: 'APPLE.COM/BILL',
-      },
-    ],
-  },
+  // {
+  //   title: 'Apr  10, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'ADVICE CONFIRMS   ',
+  //       amount: '£6,094.',
+  //       neachy: '98',
+  //       card: 'RBS22045KHAAJJ5S',
+  //       GREEN: true,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Mar  21, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'WOLVES SERVICE LTD   ',
+  //       amount: '-£6.',
+  //       neachy: '57',
+  //       card: 'Services',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'BEDSCLICK LT   ',
+  //       amount: '£7.',
+  //       neachy: '00',
+  //       card: 'employee',
+  //       GREEN: true,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Mar 10, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'NISHA LOCAL ',
+  //       amount: '-£4.',
+  //       neachy: '99',
+  //       card: 'LONDON',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Mar 07, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'CASH IN P.O MAR07',
+  //       amount: '£5.',
+  //       neachy: '00',
+  //       card: '161A BOW ROA@16:54',
+  //       GREEN: true,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 18, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'TOMA',
+  //       amount: '£2.',
+  //       neachy: '00',
+  //       card: 'faimly',
+  //       GREEN: true,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 17, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'TFL TRAVEL CH',
+  //       amount: '-£1.',
+  //       neachy: '75',
+  //       card: 'TFLGOV.UK/CP',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 11, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'MRS MAHBUBA BEGUM',
+  //       amount: '-£1.',
+  //       neachy: '75',
+  //       card: 'RETURN',
+  //     },
+  //     {
+  //       id: '1',
+  //       description: 'TOMA R ',
+  //       amount: '£6.',
+  //       neachy: '00',
+  //       card: 'FAMILY',
+  //       GREEN: true,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Feb 10, 2025',
+  //   items: [
+  //     {
+  //       id: '1',
+  //       description: 'INT 0054598575',
+  //       amount: '-£8.',
+  //       neachy: '99',
+  //       card: 'APPLE.COM/BILL',
+  //     },
+  //   ],
+  // },
 ];
 const height = Dimensions.get('screen').height;
 const BankAccount = ({ navigation }) => {
@@ -305,7 +393,7 @@ const BankAccount = ({ navigation }) => {
               BASIC BANK
             </Text>
             <Text style={{ color: Black, fontWeight: '500' }}>
-            40-11-93 21886061
+            40-22-22 41721143
             </Text>
           </View>
         </View>
@@ -320,7 +408,7 @@ const BankAccount = ({ navigation }) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£4.73</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£0.48</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>
