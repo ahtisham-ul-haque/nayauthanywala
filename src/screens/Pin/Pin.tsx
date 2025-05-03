@@ -38,7 +38,7 @@ const Pin = ({navigation}) => {
   useEffect(() => {
     if (otp.every(digit => digit !== '')) {
         // Navigate to the next screen when PIN is fully entered
-        navigation.navigate('MyTabs'); // Replace 'NextScreen' with the actual route name
+        navigation.navigate('HomeScreen'); // Replace 'NextScreen' with the actual route name
     }
 }, [otp]);
   return (

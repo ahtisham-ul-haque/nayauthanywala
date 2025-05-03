@@ -25,6 +25,11 @@ import CurrenciesScreen from '../screens/Curencies/CurrenciesScreen';
 import ManageCard from '../screens/ManageCaed/ManageCard';
 import Statement from '../screens/StateMent/Statement';
 import SettingsScreen from '../screens/Setting';
+import LoginNEw from '../screens/NewLogin';
+import HomeScreen from '../screens/HomeScreenNew';
+import AccountInformation from '../screens/AccountInformation';
+import NewTransaction from '../screens/NewTransaction';
+import PayScreen from '../screens/NewPayScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -105,7 +110,28 @@ const MainNavigation = () => {
         
         <Stack.Screen
           name="Login"
-          component={Login}
+          component={LoginNEw}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+          <Stack.Screen
+          name="Transactions"
+          component={NewTransaction}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="PayScreen"
+          component={PayScreen}
+          options={{ headerShown: false }}
+        />
+        
+         <Stack.Screen
+          name="AccountInformations"
+          component={AccountInformation}
           options={{ headerShown: false }}
         />
 

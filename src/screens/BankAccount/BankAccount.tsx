@@ -17,6 +17,30 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 const transactions = [
   {
+    title: 'Apr 29, 2025',
+    price: '£7.00',
+    items: [
+      {
+        id: '1',
+        description: 'Wolves Service Ltd ',
+        amount: '-£5.',
+        neachy: '00',
+        card: 'LONDON',
+      
+      },
+      {
+        id: '1',
+        description: 'GABOR BARANY ',
+        amount: '£11.',
+        neachy: '52',
+        card: 'LONDON',
+        GREEN:true
+      
+      },
+   
+    ],
+  },
+  {
     title: 'Apr 25, 2025',
     price: '£0.48',
     items: [
@@ -408,7 +432,7 @@ const BankAccount = ({ navigation }) => {
       </View>
       <View
         style={{ height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: Black, fontSize: 25 }}>£0.48</Text>
+        <Text style={{ color: Black, fontSize: 25 }}>£7.00</Text>
         <Text style={{ color: Black, marginVertical: 2 }}>
           Arranged overdraft : £0.00
         </Text>

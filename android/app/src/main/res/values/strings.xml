@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">HSBC UK</string>
+    <!-- <string name="app_name">HSBC UK</string> -->
+      <string name="app_name"> UK</string>
 </resources>
