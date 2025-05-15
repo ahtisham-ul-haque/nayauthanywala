@@ -16,12 +16,19 @@ const PayScreen = ({navigation}:any) => {
     <SafeAreaView style={styles.wrapper}>
       {/* Top Navigation Bar */}
       <View style={styles.topNav}>
+        <TouchableOpacity
+        onPress={()=>navigation.navigate('HomeScreen')}
+        
+        >
+
         <Icon
           name="home"
           color={Black}
           size={25}
           style={{ paddingRight: 10, borderRightWidth: 1 }}
         />
+        </TouchableOpacity>
+
         <Text style={[styles.navItem, styles.activeNav]}>Pay</Text>
         <Text style={styles.navItem}>Cards</Text>
         <Text style={styles.navItem}>Invest</Text>
@@ -45,17 +52,17 @@ const PayScreen = ({navigation}:any) => {
           }}>
           <Text style={styles.header}>Recent payees</Text>
           <View style={styles.recentPayees}>
-            {['WL', 'HS', 'HK', 'HS'].map((initials, index) => (
+            {['GB', 'KV', ].map((initials, index) => (
               <View key={index} style={styles.payeeCard}>
                 <View style={styles.circle}>
                   <Text style={styles.circleText}>{initials}</Text>
                 </View>
                 <Text style={styles.payeeText}>
-                  {initials === 'WL'
-                    ? 'WOLVES SERVICE LTD'
-                    : initials === 'HK'
-                    ? 'Harmeet Kaur'
-                    : 'Harpreet Singh'}
+                  {initials === 'GB'
+                    ? 'GABOR BARANY'
+                    : initials === 'KV'
+                    ? 'KRISZTINA vAJDA'
+                    : ''}
                 </Text>
               </View>
             ))}
@@ -128,7 +135,7 @@ const styles = StyleSheet.create({
   header: { fontSize: 18, fontWeight: 'bold', marginTop: 20 ,color:Black,marginHorizontal:10},
   recentPayees: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     marginVertical: 10,
   },
   payeeCard: { alignItems: 'center', width: 80 },

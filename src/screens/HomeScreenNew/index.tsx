@@ -115,7 +115,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-16-64 10457957{' '}
+            40-16-64 01757407{' '}
           </Text>
         </View>
         <Text
@@ -125,7 +125,7 @@ const FullScreenImage = ({ navigation }: any) => {
             marginHorizontal: 10,
             fontSize: 19,
           }}>
-          £5.00
+          £0.57.00
         </Text>
       </TouchableOpacity>
       <View
@@ -175,7 +175,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-12-98 70002267{' '}
+            40-12-98 81051709{' '}
           </Text>
         </View>
         <View style={{ borderTopWidth: 0.5, marginVertical: 10 }}></View>
@@ -198,7 +198,10 @@ const FullScreenImage = ({ navigation }: any) => {
         </TouchableOpacity>
         {Lodaer ? (
           <>
-            <View style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            <TouchableOpacity
+            
+            onPress={()=>navigation.navigate('Gratish_British_Pound')}
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 Great British Pounds
@@ -212,10 +215,12 @@ const FullScreenImage = ({ navigation }: any) => {
                   fontWeight: '600',
                 }}>
                 {' '}
-                £10.00
+                £4.92
               </Text>
-            </View>
-            <View style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            onPress={()=>navigation.navigate('USD')}
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 US Dollar
@@ -228,7 +233,7 @@ const FullScreenImage = ({ navigation }: any) => {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                23,750.<Text style={{ fontWeight: '400' }}>00USD</Text>
+                4..<Text style={{ fontWeight: '400' }}>51USD</Text>
               </Text>
               <Text
                 style={{
@@ -238,9 +243,10 @@ const FullScreenImage = ({ navigation }: any) => {
                   fontSize: 15,
                 }}>
                 {' '}
-                =£17,603.50
+                =£3.39
               </Text>
-            </View>
+            </TouchableOpacity>
+
           </>
         ) : (
           <View

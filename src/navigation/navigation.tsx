@@ -30,6 +30,8 @@ import HomeScreen from '../screens/HomeScreenNew';
 import AccountInformation from '../screens/AccountInformation';
 import NewTransaction from '../screens/NewTransaction';
 import PayScreen from '../screens/NewPayScreen';
+import Gratish_British_Pound from '../screens/Great_Britsh_Pounds';
+import USD from '../screens/USD_INFORMATION';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -118,6 +120,17 @@ const MainNavigation = () => {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
+         <Stack.Screen
+          name="Gratish_British_Pound"
+          component={Gratish_British_Pound}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="USD"
+          component={USD}
+          options={{ headerShown: false }}
+        />
+        
           <Stack.Screen
           name="Transactions"
           component={NewTransaction}

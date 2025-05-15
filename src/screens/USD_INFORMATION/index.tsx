@@ -12,94 +12,38 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Black, White } from '../../utils/Color';
 const transactions = [
-  {
-    id: '1',
-    date: 'Sunday, 11 May 2025',
-    price: ' £0.57',
-    title: 'GABOR BARANY ',
-    subtitle: 'Wed jewl',
-    amount: - 5.00,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
+ 
    {
     id: '1',
-    date: 'Thursday, 08 May 2025',
-    price: ' £5.57',
-    title: 'krisztina Vajda ',
-    subtitle: 'sister',
+    date: 'Friday, 2 May 2025',
+    newdata:true,
+    // price: ' £4.00',
+    title: 'ALI RAZA ',
+    // subtitle: 'From GBP to USD',
     amount: -10.00,
     type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-   {
-    id: '1',
-    date: 'Tuesday, 06 May 2025',
-    price: ' £15.57',
-    title: '401298 81051709 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount: -56.00,
-    type: 'debit',
-    iconname: 'person',
-  },
-  {
-    id: '7',
-    price: '5.00',
-    title: 'Ali Raza',
-    subtitle: 'Sent from Revolut',
-     amount: 71.00,
-    type: 'credit',
-    iconname: 'logo-euro',
-  },
-    {
-    id: '1',
-    date: 'Friday, 02 May 2025',
-    price: ' £0.57',
-    title: 'GABOR BARANY ',
-    subtitle: 'GPC01CSCM1',
-    amount: - 14.00,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-  {
-    id: '7',
-    price: '5.00',
-    title: 'Ali Raza',
-    subtitle: 'Sent from Revolut',
-     amount: 14.00,
-    type: 'credit',
-    iconname: 'logo-euro',
-  },
-    {
-    id: '1',
-    date: 'Thursday, 01 May 2025',
-    price: ' £0.57',
-   title: '401298 81051709 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount: -1.00,
-    type: 'debit',
     iconname: 'person',
   },
     {
     id: '1',
-    date: 'Thursday, 28 Apr 2025',
-    price: ' £1.57',
-   title: 'TESCO STORES 2380',
-    subtitle: 'DERBY',
-  amount: 10.00,
+    
+    title: 'Converted ',
+    subtitle: 'From GBP to USD',
+    amount: -13.10,
     type: 'credit',
-     iconname: 'arrow-up-circle-outline',
+    iconname: 'person',
   },
-   {
+    {
     id: '1',
-    date: 'Friday, 25 Apr 2025',
-    price: ' £1.57',
-   title: 'istvan pataki',
-    subtitle: 'Family',
-    amount: -8.43,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
+    date: 'Thursday, 1 May 2025',
+    title: 'Converted ',
+    subtitle: 'From GBP to USD',
+    amount: -1.32,
+    type: 'credit',
+    iconname: 'person',
   },
+  
+  
   // {
   //   id: '1',
   //   price: '5.00',
@@ -175,9 +119,9 @@ const transactions = [
   // },
 ];
 const data = [
-  { label: 'Pay or transfer', icons: 'arrow-up-circle-outline', id: '1' },
-  { label: 'View Statement', icons: 'newspaper-outline' },
-  { label: 'Account Details', icons: 'wallet' },
+  { label: 'Add Money', icons: 'arrow-up-circle-outline', id: '1' },
+  { label: 'Convert or Withdrae', icons: 'newspaper-outline' },
+  { label: 'View and Share account details', icons: 'wallet' },
   { label: 'More', icons: 'ellipsis-vertical' },
 ];
 const TransactionItem = ({ item }: any) => (
@@ -194,7 +138,10 @@ const TransactionItem = ({ item }: any) => (
       </View>
       <View style={{ width: '70%' }}>
         <Text style={styles.title}>{item.title}</Text>
+        {item.subtitle &&
+        
         <Text style={styles.subtitle}>{item.subtitle}</Text>
+        }
       </View>
       <Text
         style={[
@@ -216,7 +163,7 @@ const TransactionItem = ({ item }: any) => (
     </View> */}
   </View>
 );
-export default function AccountScreen({ navigation }: any) {
+export default function USD({ navigation }: any) {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
@@ -239,12 +186,12 @@ export default function AccountScreen({ navigation }: any) {
           height: 50,
           justifyContent: 'center',
           marginHorizontal: 10,
-          marginTop: 20,
         }}>
-        <Text style={{ color: Black, fontSize: 17, fontWeight: '800' }}>
-          BANK A/C
+        <Text style={{ color: Black, fontSize: 15,  }}>
+           US Dollar
+          {/* BANK A/C */}
         </Text>
-        <Text style={{ color: Black, fontSize: 15 }}> 40-16-64 01757407</Text>
+        {/* <Text style={{ color: Black, fontSize: 15 }}> 40-16-64 01757407</Text> */}
       </View>
       <View
         style={{
@@ -253,20 +200,19 @@ export default function AccountScreen({ navigation }: any) {
           marginHorizontal: 10,
           alignItems: 'center',
           borderBottomWidth: 1,
-          paddingVertical: 20,
         }}>
-        <Text style={{ color: Black, fontSize: 14 }}>Arranged overdraft</Text>
+        <Text style={{ color: Black, fontSize: 14 }}></Text>
         <View>
           <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £0.
+            £4.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              57
+              51
             </Text>
           </Text>
-          <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £0.
-            <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              00
+          <Text style={{ color: Black, fontSize: 16,  }}>
+            =£3.
+            <Text style={{ color: Black, fontSize: 13, fontWeight: '500' }}>
+              39
             </Text>
           </Text>
         </View>
@@ -288,16 +234,47 @@ export default function AccountScreen({ navigation }: any) {
           </TouchableOpacity>
         ))}
       </View>
+      <View style={{marginTop:40,flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginHorizontal:18}}>
+<View style={{flexDirection:'row',alignItems:'center'}}>
+    <View style={{height:50,width:50,borderRadius:50,backgroundColor:'#E8E8E8',alignItems:'center',justifyContent:'center'}}>
+        <Icon name='wallet' size={28} color={'red'}/>
+    </View>
+    <View><Text style={{color:Black,fontSize:15,marginLeft:16}}>Global Money card</Text></View>
+</View>
+  <Icon name='arrow-forward' size={22} color={Black}/>
+      </View>
+      <View style={{height:1,borderWidth:1,marginTop:20,borderColor:'#DCDCDC'    }}/>
+      <View style={{marginHorizontal:20,flexDirection:'row',justifyContent:'space-between',marginVertical:25}}>
+        <Text style={{color:Black,fontSize:17}}>Latest transactions</Text>
+        <Icon name='search' size={20} color={Black}/>
+      </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+      <TouchableOpacity>
+        <Text style={{ color: 'black', marginHorizontal: 80 }}>USD</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={{ color: 'black', marginHorizontal: 80 }}>All</Text>
+      </TouchableOpacity>
+
+      <View style={{ flexDirection: 'row', position: 'absolute', bottom: -5, left: 0, right: 0, }}>
+        <View style={{ flex: 1, height: 3, backgroundColor: 'red' }} />
+        <View style={{ flex: 1, height: 3, backgroundColor: 'black' }} />
+      </View>
+
+    
+    </View>
+    <View style={{marginVertical:5,height:30,backgroundColor:'#DCDCDC',justifyContent:'center'}}>
+    <Text style={{color:Black,marginHorizontal:20}}>Transactions</Text>
+    </View>
       <FlatList
         data={transactions}
         keyExtractor={item => item.id}
       ListFooterComponent={
         <View style={{flexDirection:'row',alignItems:'center'}}>
 
-<Icon name='information-circle' color={'blue'} size={25}/>
         <Text
           onPress={() => navigation.navigate('Transactions')}
-          style={styles.viewMore}> To View more transactions. go to your  statement
+          style={styles.viewMore}>  View all transactions ->
         </Text>
           </View>
       }
@@ -311,6 +288,7 @@ export default function AccountScreen({ navigation }: any) {
                   flexDirection: 'row',
                 }}>
                 <Text style={styles.date}>{item.date}</Text>
+                
                 <Text style={styles.date}>{item.price}</Text>
               </View>
             ) : null}
@@ -348,6 +326,7 @@ const styles = StyleSheet.create({
   amount: { fontSize: 16, fontWeight: '600' },
   viewMore: {
     color: '#000',
+    textAlign:'center',
     fontSize: 13,
     paddingVertical: 16,
     width:'95%'
