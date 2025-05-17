@@ -75,7 +75,6 @@ const DashBoard = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar translucent={true} backgroundColor={'transparent'} />
-      <ScrollView>
 
             <>
             <ImageBackground
@@ -249,7 +248,6 @@ const DashBoard = ({navigation}) => {
       scrollEnabled={false}
       />
       </View>
-      </ScrollView>
 
     </SafeAreaView>
   );

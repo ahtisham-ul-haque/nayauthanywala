@@ -85,7 +85,7 @@ const transactions = [
     subtitle: 'From GBP to USD',
     amount: -10.00,
     type: 'debit',
-    iconname: 'person',
+    iconname: 'ban-outline',
   },
    {
     id: '1',
@@ -105,7 +105,7 @@ const transactions = [
     subtitle: 'From GBP to USD',
     amount: -1.00,
     type: 'debit',
-    iconname: 'person',
+    iconname: 'ban-outline',
   },
   
   // {

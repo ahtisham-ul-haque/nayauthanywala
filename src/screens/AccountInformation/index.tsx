@@ -405,5 +405,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 12,
     textAlign: 'center',
+    width:'90%',
   },
 });

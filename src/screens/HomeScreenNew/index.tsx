@@ -7,6 +7,7 @@ import {
   Image,
   Text,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Black, White } from '../../utils/Color';
@@ -14,6 +15,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const FullScreenImage = ({ navigation }: any) => {
   const [Lodaer, setLodaer] = useState(false);
+   const [IsLodaer, setISLodaer] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -69,6 +71,8 @@ const FullScreenImage = ({ navigation }: any) => {
           <Icon name="eye-outline" size={15} />
         </View>
       </View>
+      <ScrollView>
+
       <TouchableOpacity
         onPress={() => navigation.navigate('AccountInformations')}
         style={{
@@ -196,7 +200,7 @@ const FullScreenImage = ({ navigation }: any) => {
             color={Black}
           />
         </TouchableOpacity>
-        {Lodaer ? (
+        {Lodaer && 
           <>
             <TouchableOpacity
             
@@ -248,8 +252,9 @@ const FullScreenImage = ({ navigation }: any) => {
             </TouchableOpacity>
 
           </>
-        ) : (
-          <View
+        }
+          <TouchableOpacity
+          onPress={()=>setISLodaer(!IsLodaer)}
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
@@ -259,10 +264,72 @@ const FullScreenImage = ({ navigation }: any) => {
             <Text style={{ color: Black, marginHorizontal: 10 }}>
               More currencies
             </Text>
-            <Icon name="chevron-down" size={18} color={Black} />
-          </View>
-        )}
+            <Icon name={IsLodaer? 'chevron-up' : 'chevron-down'}size={18} color={Black} />
+          </TouchableOpacity>
+           {IsLodaer && 
+          <>
+          
+            <TouchableOpacity 
+            onPress={()=>navigation.navigate('USD')}
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+              <Text
+                style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
+                UAE Derham
+              </Text>
+              <Text
+                style={{
+                  color: Black,
+                  marginHorizontal: 10,
+                  alignSelf: 'flex-end',
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                0.<Text style={{ fontWeight: '400' }}>00AED</Text>
+              </Text>
+            
+            </TouchableOpacity>
+              <TouchableOpacity 
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+              <Text
+                style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
+                Australia dollar
+              </Text>
+              <Text
+                style={{
+                  color: Black,
+                  marginHorizontal: 10,
+                  alignSelf: 'flex-end',
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                0.<Text style={{ fontWeight: '400' }}>00AUD</Text>
+              </Text>
+             
+            </TouchableOpacity>
+    <TouchableOpacity 
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+              <Text
+                style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
+                Candian  dollar
+              </Text>
+              <Text
+                style={{
+                  color: Black,
+                  marginHorizontal: 10,
+                  alignSelf: 'flex-end',
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                0.<Text style={{ fontWeight: '400' }}>00CAD</Text>
+              </Text>
+             
+            </TouchableOpacity>
+          </>
+        }
+
       </View>
+      </ScrollView>
+
     </SafeAreaView>
   );
 };
