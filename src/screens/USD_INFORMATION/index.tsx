@@ -131,7 +131,7 @@ const TransactionItem = ({ item }: any) => (
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 0.5,
-        paddingVertical: 20,
+        paddingVertical:10
       }}>
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
   listContent: { paddingHorizontal: 16, paddingBottom: 20 },
   date: { fontSize: 14, color: '#666', marginTop: 20, marginBottom: 8 },
   itemContainer: {},
-  title: { fontSize: 16, fontWeight: '600', color: '#222', marginLeft: 10 },
+  title: { fontSize: 14, fontWeight: '500', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
   amount: { fontSize: 16, fontWeight: '600' },
   viewMore: {
@@ -345,7 +345,7 @@ const styles = StyleSheet.create({
   circle: {
     height: 50,
     width: 50,
-    backgroundColor: White,
+    backgroundColor: "#F5F5F5",
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',

@@ -23,21 +23,25 @@ const FullScreenImage = ({ navigation }: any) => {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <View style={{ height: 265 }}>
+      <View style={{ height: 265 ,}}>
+        <View style={{height:300}}>
+
         <Image
           style={{ height: '100%', width: '100%' }}
           resizeMode="cover"
-          source={require('../../assets/images/homepage.jpeg')}
+          source={require('../../assets/images/unnamed.png')}
         />
+        </View>
+
       </View>
       <TouchableOpacity
       onPress={()=>navigation.navigate('From')}
         style={{
          
-          height: 100,
+          height: 130,
           width: 70,
           position: 'absolute',
-          top: 160,
+          top: 170,
           left: 20,
         }}></TouchableOpacity>
           <TouchableOpacity
@@ -57,6 +61,7 @@ const FullScreenImage = ({ navigation }: any) => {
           marginHorizontal: 15,
           flexDirection: 'row',
           alignItems: 'center',
+          marginTop:50
         }}>
         <Text style={{ color: Black, fontSize: 17 }}>Your product</Text>
         <View
@@ -129,7 +134,8 @@ const FullScreenImage = ({ navigation }: any) => {
             marginHorizontal: 10,
             fontSize: 19,
           }}>
-          £0.57.00
+            <Text style={{fontSize:15}}>£</Text>
+          0.57
         </Text>
       </TouchableOpacity>
       <View
@@ -182,14 +188,14 @@ const FullScreenImage = ({ navigation }: any) => {
             40-12-98 81051709{' '}
           </Text>
         </View>
-        <View style={{ borderTopWidth: 0.5, marginVertical: 10 }}></View>
+        <View style={{ borderTopWidth: 0.5, marginVertical: 10,borderColor:'#E8E8E8' }}></View>
         <TouchableOpacity
           onPress={() => setLodaer(!Lodaer)}
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             borderBottomWidth: 0.5,
-            paddingVertical: 10,
+            paddingVertical: 10,borderColor:'#E8E8E8'
           }}>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
             Currency balances
@@ -205,7 +211,7 @@ const FullScreenImage = ({ navigation }: any) => {
             <TouchableOpacity
             
             onPress={()=>navigation.navigate('Gratish_British_Pound')}
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 Great British Pounds
@@ -224,9 +230,9 @@ const FullScreenImage = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity 
             onPress={()=>navigation.navigate('USD')}
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
-                style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
+                style={{ color: Black, marginHorizontal: 10, marginTop: 5,fontSize:16 }}>
                 US Dollar
               </Text>
               <Text
@@ -259,7 +265,8 @@ const FullScreenImage = ({ navigation }: any) => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               borderBottomWidth: 0.5,
-              paddingVertical: 10,
+              paddingVertical: 10
+              ,borderColor:'#E8E8E8'
             }}>
             <Text style={{ color: Black, marginHorizontal: 10 }}>
               More currencies
@@ -271,7 +278,7 @@ const FullScreenImage = ({ navigation }: any) => {
           
             <TouchableOpacity 
             onPress={()=>navigation.navigate('USD')}
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 UAE Derham
@@ -289,7 +296,7 @@ const FullScreenImage = ({ navigation }: any) => {
             
             </TouchableOpacity>
               <TouchableOpacity 
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 Australia dollar
@@ -307,7 +314,7 @@ const FullScreenImage = ({ navigation }: any) => {
              
             </TouchableOpacity>
     <TouchableOpacity 
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10 }}>
+            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
                 Candian  dollar

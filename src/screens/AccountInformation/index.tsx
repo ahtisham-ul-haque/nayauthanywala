@@ -175,7 +175,7 @@ const transactions = [
   // },
 ];
 const data = [
-  { label: 'Pay or transfer', icons: 'arrow-up-circle-outline', id: '1' },
+  { label: 'Pay or transfer', icons: 'arrow-up-circle', id: '1' },
   { label: 'View Statement', icons: 'newspaper-outline' },
   { label: 'Account Details', icons: 'wallet' },
   { label: 'More', icons: 'ellipsis-vertical' },
@@ -185,17 +185,21 @@ const TransactionItem = ({ item }: any) => (
     <View
       style={{
         flexDirection: 'row',
-        alignItems: 'center',
-        borderBottomWidth: 0.5,
-        paddingVertical: 20,
+        justifyContent:'space-between',
+        alignItems:'center'
+        
       }}>
+        <View style={{flexDirection:'row',}}>
+
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
       </View>
-      <View style={{ width: '70%' }}>
+      <View style={{ width: '70%',justifyContent:'center' }}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
       </View>
+        </View>
+
       <Text
         style={[
           styles.amount,
@@ -241,10 +245,10 @@ export default function AccountScreen({ navigation }: any) {
           marginHorizontal: 10,
           marginTop: 20,
         }}>
-        <Text style={{ color: Black, fontSize: 17, fontWeight: '800' }}>
+        <Text style={{ color: "#353935", fontSize: 17, marginLeft:20 }}>
           BANK A/C
         </Text>
-        <Text style={{ color: Black, fontSize: 15 }}> 40-16-64 01757407</Text>
+        <Text style={{ color: Black, fontSize: 15,marginLeft:15 }}> 40-16-64 01757407</Text>
       </View>
       <View
         style={{
@@ -254,23 +258,27 @@ export default function AccountScreen({ navigation }: any) {
           alignItems: 'center',
           borderBottomWidth: 1,
           paddingVertical: 20,
+          borderColor:'#D3D3D3'
         }}>
-        <Text style={{ color: Black, fontSize: 14 }}>Arranged overdraft</Text>
+        <Text style={{ color: Black, fontSize: 14,marginTop:30,marginLeft:20 }}>Arranged overdraft</Text>
         <View>
-          <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £0.
+          <Text style={{ color: Black, fontSize: 22, fontWeight: '500' }}>
+            <Text style={{ color: Black, fontSize: 18, fontWeight: '500'}}>£ </Text>
+            0.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
               57
             </Text>
           </Text>
-          <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £0.
+          <Text style={{ color: Black, fontSize: 17, fontWeight: '500' }}>
+            £ 0.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
               00
             </Text>
           </Text>
         </View>
       </View>
+
+      
       <View style={styles.row}>
         {data.map((item, index) => (
           <TouchableOpacity
@@ -280,7 +288,7 @@ export default function AccountScreen({ navigation }: any) {
             <View style={styles.circle}>
               <Icon
                 name={item?.icons}
-                size={20}
+                size={22}
                 color={item?.id == '1' ? 'red' : Black}
               />
             </View>
@@ -288,6 +296,35 @@ export default function AccountScreen({ navigation }: any) {
           </TouchableOpacity>
         ))}
       </View>
+        <TouchableOpacity
+                  onPress={() => navigation.navigate('ManageCard')}
+                  style={{
+                    margin: 10,
+                    marginHorizontal: 15,
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    marginTop:20
+                  }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{height:50,width:50,backgroundColor:'#F8F8F8',borderRadius:30,alignItems:'center',justifyContent:'center'}}>
+
+                    <Icon name="card" color={'#D2042D'} size={22} />
+                    </View>
+                    <Text style={{ color: Black, paddingLeft: 10, fontSize: 15 }}>
+                      Manage card
+                    </Text>
+                  </View>
+                    <Icon
+                      name="arrow-forward-outline"
+                      color={Black}
+                      size={22}
+                    />
+                </TouchableOpacity>
+
+                 <View style={{marginHorizontal:20,flexDirection:'row',justifyContent:'space-between',}}>
+                        <Text style={{color:Black,fontSize:17}}>Latest transactions</Text>
+                        <Icon name='search' size={20} color={Black}/>
+                      </View>
       <FlatList
         data={transactions}
         keyExtractor={item => item.id}
@@ -305,7 +342,7 @@ export default function AccountScreen({ navigation }: any) {
         renderItem={({ item }) => (
           <>
             {item.date ? (
-              <View
+      <View
                 style={{
                   justifyContent: 'space-between',
                   flexDirection: 'row',
@@ -327,7 +364,6 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#fff' },
   headerContainer: {
     padding: 16,
-    borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     backgroundColor: '#fff',
     flexDirection: 'row',
@@ -336,16 +372,16 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#111',
+    color: '#353935',
     paddingLeft: 10,
     width: '90%',
   },
   listContent: { paddingHorizontal: 16, paddingBottom: 20 },
   date: { fontSize: 14, color: '#666', marginTop: 20, marginBottom: 8 },
   itemContainer: {},
-  title: { fontSize: 16, fontWeight: '600', color: '#222', marginLeft: 10 },
+  title: { fontSize: 14, fontWeight: '600', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
-  amount: { fontSize: 16, fontWeight: '600' },
+  amount: { fontSize: 16, fontWeight: '600', },
   viewMore: {
     color: '#000',
     fontSize: 13,
@@ -362,11 +398,12 @@ const styles = StyleSheet.create({
   item: {
     alignItems: 'center',
     flex: 1,
+    marginHorizontal:20
   },
   circle: {
     height: 50,
     width: 50,
-    backgroundColor: White,
+    backgroundColor:"#F8F8F8",
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',

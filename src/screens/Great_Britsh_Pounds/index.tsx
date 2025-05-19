@@ -194,16 +194,29 @@ const TransactionItem = ({ item }: any) => (
       style={{
         flexDirection: 'row',
         alignItems: 'center',
-        borderBottomWidth: 0.5,
-        paddingVertical: 20,
+        borderBottomWidth:1,
+        paddingVertical:8,
+        borderColor:'#F5F5F5',
+        justifyContent:'space-between'
       }}>
+        <View style={{flexDirection:'row',alignItems:'center'}}>
+
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
       </View>
+      
       <View style={{ width: '70%' }}>
-        <Text style={styles.title}>{item.title}</Text>
+        {item.subtitle ? <>
+  <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
+        </>
+            :
+           <Text style={styles.title}>{item.title}</Text>
+      }
+     
       </View>
+        </View>
+
       <Text
         style={[
           styles.amount,
@@ -262,6 +275,7 @@ export default function Gratish_British_Pound({ navigation }: any) {
           marginHorizontal: 10,
           alignItems: 'center',
           borderBottomWidth: 1,
+          borderColor:'#F0F0F0'
         }}>
         <Text style={{ color: Black, fontSize: 14 }}></Text>
         <View>
@@ -319,7 +333,7 @@ export default function Gratish_British_Pound({ navigation }: any) {
 
       <View style={{ flexDirection: 'row', position: 'absolute', bottom: -5, left: 0, right: 0, }}>
         <View style={{ flex: 1, height: 3, backgroundColor: 'red' }} />
-        <View style={{ flex: 1, height: 3, backgroundColor: 'black' }} />
+        <View style={{ flex: 1, height: 3, backgroundColor: '#B0B0B0' }} />
       </View>
 
     
@@ -366,8 +380,7 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#fff' },
   headerContainer: {
     padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: '#F0F0F0',
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
@@ -382,7 +395,7 @@ const styles = StyleSheet.create({
   listContent: { paddingHorizontal: 16, paddingBottom: 20 },
   date: { fontSize: 14, color: '#666', marginTop: 20, marginBottom: 8 },
   itemContainer: {},
-  title: { fontSize: 16, fontWeight: '600', color: '#222', marginLeft: 10 },
+  title: { fontSize: 14, fontWeight: '500', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
   amount: { fontSize: 16, fontWeight: '600' },
   viewMore: {
@@ -406,7 +419,7 @@ const styles = StyleSheet.create({
   circle: {
     height: 50,
     width: 50,
-    backgroundColor: White,
+    backgroundColor: '#F8F8F8',
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',
