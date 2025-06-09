@@ -31,7 +31,7 @@ elevation: 0.5,}}>
     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
       
         <Icon name="wallet-outline" size={40} color={'#000'}/>
-      <Text style={{color:'#000',textAlign:'center',width:'80%',marginTop:30,fontSize:16}}>We're unable to process this request as either you don't hold an eligible account or the personal details we hold for you are  not up to date. Please chat to us in the support tab. CDDINH1</Text>
+      <Text style={{color:'#000',textAlign:'center',width:'80%',marginTop:30,fontSize:16}}>We're unable to process this request as either you don't hold an eligible account or the personal details we hold for you are  not up to date. Please chat with us. Reference CDDINH1</Text>
     </View>
     </SafeAreaView>
 

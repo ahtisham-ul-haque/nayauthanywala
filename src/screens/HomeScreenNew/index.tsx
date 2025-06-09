@@ -243,7 +243,7 @@ const FullScreenImage = ({ navigation }: any) => {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                4..<Text style={{ fontWeight: '400' }}>51USD</Text>
+                55,004.<Text style={{ fontWeight: '400' }}>51USD</Text>
               </Text>
               <Text
                 style={{
@@ -253,7 +253,7 @@ const FullScreenImage = ({ navigation }: any) => {
                   fontSize: 15,
                 }}>
                 {' '}
-                =£3.39
+                =£40,648.78
               </Text>
             </TouchableOpacity>
 

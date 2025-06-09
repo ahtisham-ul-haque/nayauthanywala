@@ -175,10 +175,10 @@ const transactions = [
   // },
 ];
 const data = [
-  { label: 'Pay or transfer', icons: 'arrow-up-circle', id: '1' },
-  { label: 'View Statement', icons: 'newspaper-outline' },
-  { label: 'Account Details', icons: 'wallet' },
-  { label: 'More', icons: 'ellipsis-vertical' },
+  { label: 'Pay or transfer', icons: 'arrow-up-circle', id: '1',screen:'BankAccountScreen' },
+  { label: 'View Statement', icons: 'newspaper-outline',screen:'BankAccountScreen'  },
+  { label: 'Account Details', icons: 'wallet' ,screen:'BankAccountScreen' },
+  { label: 'More', icons: 'ellipsis-vertical',screen:'BankAccountScreen'  },
 ];
 const TransactionItem = ({ item }: any) => (
   <View style={styles.itemContainer}>

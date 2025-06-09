@@ -12,7 +12,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Black, White } from '../../utils/Color';
 const transactions = [
- 
+  {
+    id: '1',
+    date: 'Tuesday, 10 jun 2025',
+    newdata:true,
+    // price: ' £4.00',
+    title: 'MAYUSH BUILDING ',
+    subtitle: 'CONSTRUCTION COMPANY',
+    amount: -55000,
+    type: 'credit',
+    iconname: 'person',
+  },
    {
     id: '1',
     date: 'Friday, 2 May 2025',
@@ -119,10 +129,10 @@ const transactions = [
   // },
 ];
 const data = [
-  { label: 'Add Money', icons: 'arrow-up-circle-outline', id: '1' },
-  { label: 'Convert or Withdrae', icons: 'newspaper-outline' },
-  { label: 'View and Share account details', icons: 'wallet' },
-  { label: 'More', icons: 'ellipsis-vertical' },
+  { label: 'Add Money', icons: 'arrow-up-circle-outline', id: '1',screen:'PayScreen' },
+  { label: 'Convert or Withdrae', icons: 'newspaper-outline', screen:'PayScreen'},
+  { label: 'View and Share account details', icons: 'wallet' ,screen:'BankAccountScreen'},
+  { label: 'More', icons: 'ellipsis-vertical',screen:'PayScreen' },
 ];
 const TransactionItem = ({ item }: any) => (
   <View style={styles.itemContainer}>
@@ -136,7 +146,7 @@ const TransactionItem = ({ item }: any) => (
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
       </View>
-      <View style={{ width: '70%' }}>
+      <View style={{ width: '58%' }}>
         <Text style={styles.title}>{item.title}</Text>
         {item.subtitle &&
         
@@ -144,12 +154,16 @@ const TransactionItem = ({ item }: any) => (
         }
       </View>
       <Text
-        style={[
-          styles.amount,
-          { color: item.type === 'credit' ? '#007e33' : '#000' },
-        ]}>
-        {item.type === 'credit' ? '+' : '-'}£{Math.abs(item.amount).toFixed(2)}
-      </Text>
+  style={[
+    styles.amount,
+    { color: item.type === 'credit' ? '#007e33' : '#000' },
+  ]}>
+  {item.type === 'credit' ? '+' : '-'}£
+  {Math.abs(item.amount).toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}
+</Text>
     </View>
 
     {/* <View>
@@ -204,15 +218,15 @@ export default function USD({ navigation }: any) {
         <Text style={{ color: Black, fontSize: 14 }}></Text>
         <View>
           <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £4.
+            55,004.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              51
+              51 USD
             </Text>
           </Text>
           <Text style={{ color: Black, fontSize: 16,  }}>
-            =£3.
+            =£40,648.
             <Text style={{ color: Black, fontSize: 13, fontWeight: '500' }}>
-              39
+              78
             </Text>
           </Text>
         </View>
@@ -220,7 +234,7 @@ export default function USD({ navigation }: any) {
       <View style={styles.row}>
         {data.map((item, index) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate('PayScreen')}
+            onPress={() => navigation.navigate(item?.screen)}
             key={index}
             style={styles.item}>
             <View style={styles.circle}>
@@ -323,7 +337,7 @@ const styles = StyleSheet.create({
   itemContainer: {},
   title: { fontSize: 14, fontWeight: '500', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
-  amount: { fontSize: 16, fontWeight: '600' },
+  amount: { fontSize: 16, fontWeight: '600',textAlign:'right',width:'30%' },
   viewMore: {
     color: '#000',
     textAlign:'center',

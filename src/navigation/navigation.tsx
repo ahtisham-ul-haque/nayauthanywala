@@ -32,6 +32,7 @@ import NewTransaction from '../screens/NewTransaction';
 import PayScreen from '../screens/NewPayScreen';
 import Gratish_British_Pound from '../screens/Great_Britsh_Pounds';
 import USD from '../screens/USD_INFORMATION';
+import BankAccountScreen from '../screens/ViewAndShare';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -120,6 +121,12 @@ const MainNavigation = () => {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
+          <Stack.Screen
+          name="BankAccountScreen"
+          component={BankAccountScreen}
+          options={{ headerShown: false }}
+        />
+        
          <Stack.Screen
           name="Gratish_British_Pound"
           component={Gratish_British_Pound}
