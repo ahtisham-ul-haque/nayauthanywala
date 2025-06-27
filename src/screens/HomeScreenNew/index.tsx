@@ -124,7 +124,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-16-64 01757407{' '}
+            40-12-62 82768402{' '}
           </Text>
         </View>
         <Text
@@ -135,7 +135,7 @@ const FullScreenImage = ({ navigation }: any) => {
             fontSize: 19,
           }}>
             <Text style={{fontSize:15}}>£</Text>
-          0.57
+          2.45
         </Text>
       </TouchableOpacity>
       <View
@@ -185,7 +185,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-12-98 81051709{' '}
+            40-16-72 53867641{' '}
           </Text>
         </View>
         <View style={{ borderTopWidth: 0.5, marginVertical: 10,borderColor:'#E8E8E8' }}></View>
@@ -214,48 +214,34 @@ const FullScreenImage = ({ navigation }: any) => {
             style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
               <Text
                 style={{ color: Black, marginHorizontal: 10, marginTop: 5 }}>
-                Great British Pounds
+                Great British pounds
               </Text>
+              <View style={{alignItems:'flex-end'}}>
+
               <Text
                 style={{
                   color: Black,
                   marginHorizontal: 10,
-                  alignSelf: 'flex-end',
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: '600',
                 }}>
                 {' '}
-                £4.92
+                £2.78
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity 
-            onPress={()=>navigation.navigate('USD')}
-            style={{ borderBottomWidth: 0.5, paddingVertical: 10,borderColor:'#E8E8E8' }}>
-              <Text
-                style={{ color: Black, marginHorizontal: 10, marginTop: 5,fontSize:16 }}>
-                US Dollar
-              </Text>
-              <Text
+                 <Text
                 style={{
                   color: Black,
                   marginHorizontal: 10,
-                  alignSelf: 'flex-end',
-                  fontSize: 16,
-                  fontWeight: '700',
-                }}>
-                55,004.<Text style={{ fontWeight: '400' }}>51USD</Text>
-              </Text>
-              <Text
-                style={{
-                  color: Black,
-                  marginHorizontal: 10,
-                  alignSelf: 'flex-end',
-                  fontSize: 15,
+                  fontSize: 13,
                 }}>
                 {' '}
-                =£40,648.78
+                =3.24 EUR
               </Text>
+              </View>
+
+              
             </TouchableOpacity>
+           
 
           </>
         }
@@ -335,6 +321,66 @@ const FullScreenImage = ({ navigation }: any) => {
         }
 
       </View>
+       <TouchableOpacity
+        style={{
+          marginVertical:10,
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            HSBC CURRENCY ACCOUNT
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-11-99 92864350{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}></Text>
+          1.28 EUR
+        </Text>
+      </TouchableOpacity>
       </ScrollView>
 
     </SafeAreaView>

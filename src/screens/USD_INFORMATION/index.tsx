@@ -146,7 +146,7 @@ const TransactionItem = ({ item }: any) => (
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
       </View>
-      <View style={{ width: '58%' }}>
+      <View style={{ width: '50%' }}>
         <Text style={styles.title}>{item.title}</Text>
         {item.subtitle &&
         
@@ -158,12 +158,17 @@ const TransactionItem = ({ item }: any) => (
     styles.amount,
     { color: item.type === 'credit' ? '#007e33' : '#000' },
   ]}>
-  {item.type === 'credit' ? '+' : '-'}£
+  {item.type === 'credit' ? '+' : '-'}
   {Math.abs(item.amount).toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}
+   
 </Text>
+<Text  style={[
+  styles.checkusd,
+    { color: item.type === 'credit' ? '#007e33' : '#000' },
+  ]}> USD</Text>
     </View>
 
     {/* <View>
@@ -287,7 +292,7 @@ export default function USD({ navigation }: any) {
         <View style={{flexDirection:'row',alignItems:'center'}}>
 
         <Text
-          onPress={() => navigation.navigate('Transactions')}
+          // onPress={() => navigation.navigate('Transactions')}
           style={styles.viewMore}>  View all transactions ->
         </Text>
           </View>
@@ -338,6 +343,7 @@ const styles = StyleSheet.create({
   title: { fontSize: 14, fontWeight: '500', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
   amount: { fontSize: 16, fontWeight: '600',textAlign:'right',width:'30%' },
+  checkusd:{ fontSize: 16, fontWeight: '600',textAlign:'right',},
   viewMore: {
     color: '#000',
     textAlign:'center',

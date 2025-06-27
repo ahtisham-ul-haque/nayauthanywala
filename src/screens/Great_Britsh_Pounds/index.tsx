@@ -14,100 +14,106 @@ import { Black, White } from '../../utils/Color';
 const transactions = [
   {
     id: '1',
-    date: 'Wednesday, 7 May 2025',
-    price: ' £27.72',
-    title: 'NISA LOCAL ',
-    amount: - 15.00,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
+    date: 'Wednesday, 25 Jun 2025',
+    price: ' £2.78',
+    title: 'Added ',
+    subtitle: 'From BANK A/C',
+    amount:  "20.00",
+     type: 'credit',
+    iconname: 'albums-outline',
   },
   {
     id: '1',
     price: ' £6.00',
-    title: 'WESTFIELD STRATFORD',
+    title: 'WESTEX SERVICES L',
     // subtitle: 'WESTFIELDS',
-    amount: - 6.00,
+    amount:  "20.00",
     type: 'debit',
     iconname: 'arrow-up-circle-outline',
   },
-    {
-    id: '1',
-    price: ' £6.00',
-    title: 'INDI-GO RASOL',
-    subtitle: 'WESTFIELDS',
-    amount: - 6.00,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
+   
+ 
    {
     id: '1',
-    price: ' £6.00',
-    title: 'SQ *MRS CHEW* CHINESE',
-    subtitle: 'KL',
-    amount: - 9.90,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-    {
-    id: '1',
-    // date: 'Wednesday, 7 May 2025',
-    price: ' £27.72',
-    title: 'NISA LOCAL ',
-    amount: - 5.98,
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-   {
-    id: '1',
-    date: 'Tuesday, 6 May 2025',
-    price: ' £48.70',
-    title: 'IMAAN PERMIUM QUALITY Vajda ',
+    date: 'Tuesday, 24 Jun 2025',
+    price: ' £2.78',
+    title: 'AZAM HUSSAIN',
     // subtitle: 'sister',
-    amount: -11.30,
+    amount: "1,480.00",
     type: 'debit',
-    iconname: 'arrow-up-circle-outline',
+    World:'AH'
   },
-   {
-    id: '1',
-    // date: 'Tuesday, 6 May 2025',
-    price: ' £48.70',
-    title: 'Added ',
-    subtitle: 'From 40-16-64 01757407',
-    amount: -56.00,
-       type: 'credit',
-    iconname: 'albums-outline',
-  },
-   {
-    id: '1',
-    date: 'Friday, 2 May 2025',
-    price: ' £4.00',
-    title: 'Converted ',
-    subtitle: 'From GBP to USD',
-    amount: -10.00,
-    type: 'debit',
-    iconname: 'ban-outline',
-  },
+  
    {
     id: '1',
     // date: 'Tuesday, 6 May 2025',
     price: ' £48.70',
     title: 'Added ',
     subtitle: 'From BANK A/C',
-    amount: -14.00,
+    amount: "1,480.00",
        type: 'credit',
     iconname: 'albums-outline',
   },
-     {
+   {
     id: '1',
-    date: 'Friday, 1 May 2025',
-    price: ' £0.00',
-    title: 'Converted ',
-    subtitle: 'From GBP to USD',
-    amount: -1.00,
+    date: 'Thursday, 19 Jun 2025',
+    price: ' £2.78',
+    title: 'MIDX TRADERS LTD ',
+    amount: "5.00",
     type: 'debit',
-    iconname: 'ban-outline',
+    iconname: 'arrow-up-circle-outline',
   },
   
+     {
+    id: '1',
+    date: 'Tuesday, 17 Jun 2025',
+    price: ' £7.78',
+    title: 'MUHAMMAD UMAM SAEED ',
+    amount: "15.00",
+    type: 'debit',
+    World:'MU'
+  
+  },
+
+     {
+    id: '1',
+    price: ' £2.78',
+    title: 'Added ',
+    subtitle: 'From BANK A/C',
+    amount:  "20.00",
+     type: 'credit',
+    iconname: 'albums-outline',
+  },
+   {
+    id: '1',
+    date: 'Friday, 13 Jun 2025',
+    id: '1',
+    price: ' £2.78',
+    title: 'Added ',
+    subtitle: 'From HSBC CURRENCY ACCOUNT',
+    amount:  "7.32",
+     type: 'credit',
+    iconname: 'albums-outline',
+  },
+  {
+    id: '1',
+    price: ' £6.00',
+    title: 'WESTEX SERVICES L',
+    // subtitle: 'WESTFIELDS',
+    amount:  "5.00",
+    type: 'debit',
+    iconname: 'arrow-up-circle-outline',
+  },
+     {
+    id: '1',
+    date: 'Tuesday, 10 Jun 2025',
+    id: '1',
+    price: ' £10.46',
+    title: 'ALLENB LIMITED ',
+    amount:  "20.00",
+     type: 'debit',
+    iconname: 'arrow-up-circle-outline',
+  },
   // {
   //   id: '1',
   //   price: '5.00',
@@ -202,10 +208,14 @@ const TransactionItem = ({ item }: any) => (
         <View style={{flexDirection:'row',alignItems:'center'}}>
 
       <View style={[styles.circles]}>
-        <Icon name={item?.iconname} size={20} color={Black} />
+        {item?.iconname ? 
+        
+        <Icon name={item?.iconname} size={20} color={Black} />:
+        <Text style={{color:'#000',fontWeight:'600'}}>{item?.World}</Text>
+      }
       </View>
       
-      <View style={{ width: '70%' }}>
+      <View style={{ width: '65%' }}>
         {item.subtitle ? <>
   <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
@@ -222,7 +232,7 @@ const TransactionItem = ({ item }: any) => (
           styles.amount,
           { color: item.type === 'credit' ? '#007e33' : '#000' },
         ]}>
-        {item.type === 'credit' ? '+' : '-'}£{Math.abs(item.amount).toFixed(2)}
+        {item.type === 'credit' ? '+' : '-'}£{item?.amount}
       </Text>
     </View>
 
@@ -263,7 +273,7 @@ export default function Gratish_British_Pound({ navigation }: any) {
           marginTop: 20,
         }}>
         <Text style={{ color: Black, fontSize: 15,  }}>
-            Great British Pounds
+            Great British pounds
           {/* BANK A/C */}
         </Text>
         {/* <Text style={{ color: Black, fontSize: 15 }}> 40-16-64 01757407</Text> */}
@@ -278,19 +288,19 @@ export default function Gratish_British_Pound({ navigation }: any) {
           borderColor:'#F0F0F0'
         }}>
         <Text style={{ color: Black, fontSize: 14 }}></Text>
-        <View>
+        <View style={{alignItems:'flex-end'}}>
           <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £4.
+            £2.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              92
+              78
             </Text>
           </Text>
-          {/* <Text style={{ color: Black, fontSize: 22, fontWeight: '800' }}>
-            £0.
+          <Text style={{ color: Black, fontSize: 17 , fontWeight: '800' }}>
+            =3.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              00
+              24 EUR
             </Text>
-          </Text> */}
+          </Text>
         </View>
       </View>
       <View style={styles.row}>

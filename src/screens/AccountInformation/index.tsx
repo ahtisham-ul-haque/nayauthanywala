@@ -14,92 +14,107 @@ import { Black, White } from '../../utils/Color';
 const transactions = [
   {
     id: '1',
-    date: 'Sunday, 11 May 2025',
-    price: ' £0.57',
-    title: 'GABOR BARANY ',
-    subtitle: 'Wed jewl',
-    amount: - 5.00,
+    date: 'Wednesday, 25 Jun 2025',
+    price: ' £2.45',
+    title: 'GLOBAL MONEY ',
+    subtitle: 'GPC01HWRK7',
+    amount:  "20.00",
     type: 'debit',
     iconname: 'arrow-up-circle-outline',
   },
    {
     id: '1',
-    date: 'Thursday, 08 May 2025',
-    price: ' £5.57',
-    title: 'krisztina Vajda ',
-    subtitle: 'sister',
-    amount: -10.00,
+    date: 'Tuesday, 24 Jun 2025',
+    price: ' £22.45',
+    title: 'GLOBAL MONEY ',
+    subtitle: 'GPC01HT4FP',
+    amount: "1,480.00",
     type: 'debit',
     iconname: 'arrow-up-circle-outline',
   },
    {
-    id: '1',
-    date: 'Tuesday, 06 May 2025',
-    price: ' £15.57',
-    title: '401298 81051709 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount: -56.00,
-    type: 'debit',
-    iconname: 'person',
-  },
-  {
-    id: '7',
-    price: '5.00',
-    title: 'Ali Raza',
-    subtitle: 'Sent from Revolut',
-     amount: 71.00,
+     id: '1',
+    price: ' £6.00',
+    title: 'WESTEX SERVICES LT',
+    // subtitle: 'WESTFIELDS',
+    amount:  "1,500.00",
+     subtitle: 'pay',
     type: 'credit',
     iconname: 'logo-euro',
   },
-    {
+   {
     id: '1',
-    date: 'Friday, 02 May 2025',
-    price: ' £0.57',
-    title: 'GABOR BARANY ',
-    subtitle: 'GPC01CSCM1',
-    amount: - 14.00,
+    date: 'Tuesday, 17 Jun 2025',
+    price: ' £2.45',
+    title: 'GLOBAL MONEY ',
+    subtitle: 'GPCO1H4K5A',
+    amount: "20.00",
     type: 'debit',
-    iconname: 'arrow-up-circle-outline',
+    iconname: 'person',
   },
-  {
-    id: '7',
-    price: '5.00',
-    title: 'Ali Raza',
-    subtitle: 'Sent from Revolut',
-     amount: 14.00,
+   {
+     id: '1',
+    price: ' £6.00',
+    title: 'WESTEX SERVICES LT',
+    // subtitle: 'WESTFIELDS',
+    amount:  "20.00",
+     subtitle: 'pay',
     type: 'credit',
     iconname: 'logo-euro',
   },
+  
     {
     id: '1',
-    date: 'Thursday, 01 May 2025',
-    price: ' £0.57',
-   title: '401298 81051709 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount: -1.00,
+    date: 'Thursday, 22 May 2025',
+    price: ' £2.45',
+    title: 'Zettle... *Westex ser ',
+    subtitle: 'Hayes',
+    amount:  "6.00",
     type: 'debit',
+    iconname: 'arrow-up-circle-outline',
+  },
+
+    {
+    id: '1',
+    date: 'Wednesday, 21 May 2025',
+    price: ' £8.45',
+   title: '401672 53867641 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:" 4.00",
+    type: 'credit',
     iconname: 'person',
   },
     {
     id: '1',
-    date: 'Thursday, 28 Apr 2025',
-    price: ' £1.57',
-   title: 'TESCO STORES 2380',
-    subtitle: 'DERBY',
-  amount: 10.00,
+    date: 'Monday, 19 May 2025',
+    price: ' £4.45',
+   title: '401672 53867641 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:" 3.00",
     type: 'credit',
-     iconname: 'arrow-up-circle-outline',
+    iconname: 'person',
   },
    {
     id: '1',
-    date: 'Friday, 25 Apr 2025',
-    price: ' £1.57',
-   title: 'istvan pataki',
-    subtitle: 'Family',
-    amount: -8.43,
+    date: 'Friday, 16 May 2025',
+    price: ' £1.45',
+   title: 'Paramjit singh vid ',
+    subtitle: 'O',
+    amount:" 1.00",
     type: 'debit',
     iconname: 'arrow-up-circle-outline',
   },
+   {
+    id: '1',
+    date: 'Thursday, 15 May 2025',
+    price: ' £2.45',
+   title: '401672 53867641 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:" 118.00",
+    type: 'debit',
+    iconname: 'person',
+  },
+   
   // {
   //   id: '1',
   //   price: '5.00',
@@ -194,7 +209,7 @@ const TransactionItem = ({ item }: any) => (
       <View style={[styles.circles]}>
         <Icon name={item?.iconname} size={20} color={Black} />
       </View>
-      <View style={{ width: '70%',justifyContent:'center' }}>
+      <View style={{ width: '65%',justifyContent:'center' }}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
       </View>
@@ -205,7 +220,7 @@ const TransactionItem = ({ item }: any) => (
           styles.amount,
           { color: item.type === 'credit' ? '#007e33' : '#000' },
         ]}>
-        {item.type === 'credit' ? '+' : '-'}£{Math.abs(item.amount).toFixed(2)}
+        {item.type === 'credit' ? '+' : '-'}£{item?.amount}
       </Text>
     </View>
 
@@ -238,18 +253,7 @@ export default function AccountScreen({ navigation }: any) {
       </View>
       <ScrollView>
 
-      <View
-        style={{
-          height: 50,
-          justifyContent: 'center',
-          marginHorizontal: 10,
-          marginTop: 20,
-        }}>
-        <Text style={{ color: "#353935", fontSize: 17, marginLeft:20 }}>
-          BANK A/C
-        </Text>
-        <Text style={{ color: Black, fontSize: 15,marginLeft:15 }}> 40-16-64 01757407</Text>
-      </View>
+  
       <View
         style={{
           justifyContent: 'space-between',
@@ -264,9 +268,9 @@ export default function AccountScreen({ navigation }: any) {
         <View>
           <Text style={{ color: Black, fontSize: 22, fontWeight: '500' }}>
             <Text style={{ color: Black, fontSize: 18, fontWeight: '500'}}>£ </Text>
-            0.
+            2.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              57
+              45
             </Text>
           </Text>
           <Text style={{ color: Black, fontSize: 17, fontWeight: '500' }}>
@@ -331,10 +335,10 @@ export default function AccountScreen({ navigation }: any) {
       ListFooterComponent={
         <View style={{flexDirection:'row',alignItems:'center'}}>
 
-<Icon name='information-circle' color={'blue'} size={25}/>
+{/* <Icon name='information-circle' color={'blue'} size={25}/> */}
         <Text
           onPress={() => navigation.navigate('Transactions')}
-          style={styles.viewMore}> To View more transactions. go to your  statement
+          style={styles.viewMore}>  View more transactions ->
         </Text>
           </View>
       }
@@ -386,7 +390,8 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 13,
     paddingVertical: 16,
-    width:'95%'
+    width:'95%',
+  textAlign:'center'
   },
   row: {
     flexDirection: 'row',
