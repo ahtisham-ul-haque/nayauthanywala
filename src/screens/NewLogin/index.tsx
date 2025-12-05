@@ -63,7 +63,7 @@ const LoginNEw = ({}) => {
             marginHorizontal: 20,
             marginVertical: 50,
           }}>
-          Good morning istva****
+          Good morning singh****
         </Text>
       </View>
         <TouchableOpacity

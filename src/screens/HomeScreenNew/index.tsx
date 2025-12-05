@@ -124,7 +124,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-12-62 82768402{' '}
+            40-16-64 10261300{' '}
           </Text>
         </View>
         <Text
@@ -135,7 +135,7 @@ const FullScreenImage = ({ navigation }: any) => {
             fontSize: 19,
           }}>
             <Text style={{fontSize:15}}>£</Text>
-          2.45
+          0.05
         </Text>
       </TouchableOpacity>
       <View
@@ -185,7 +185,7 @@ const FullScreenImage = ({ navigation }: any) => {
         </View>
         <View>
           <Text style={{ color: Black, marginHorizontal: 10 }}>
-            40-16-72 53867641{' '}
+            40-16-72 38025703{' '}
           </Text>
         </View>
         <View style={{ borderTopWidth: 0.5, marginVertical: 10,borderColor:'#E8E8E8' }}></View>
@@ -321,7 +321,7 @@ const FullScreenImage = ({ navigation }: any) => {
         }
 
       </View>
-       <TouchableOpacity
+       {/* <TouchableOpacity
         style={{
           marginVertical:10,
           paddingVertical: 10,
@@ -380,7 +380,7 @@ const FullScreenImage = ({ navigation }: any) => {
             <Text style={{fontSize:15}}></Text>
           1.28 EUR
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       </ScrollView>
 
     </SafeAreaView>

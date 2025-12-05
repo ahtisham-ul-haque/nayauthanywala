@@ -14,106 +14,135 @@ import { Black, White } from '../../utils/Color';
 const transactions = [
   {
     id: '1',
-    date: 'Wednesday, 25 Jun 2025',
-    price: ' £2.45',
-    title: 'GLOBAL MONEY ',
-    subtitle: 'GPC01HWRK7',
-    amount:  "20.00",
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-   {
-    id: '1',
-    date: 'Tuesday, 24 Jun 2025',
-    price: ' £22.45',
-    title: 'GLOBAL MONEY ',
-    subtitle: 'GPC01HT4FP',
-    amount: "1,480.00",
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-   {
-     id: '1',
-    price: ' £6.00',
-    title: 'WESTEX SERVICES LT',
-    // subtitle: 'WESTFIELDS',
-    amount:  "1,500.00",
-     subtitle: 'pay',
-    type: 'credit',
-    iconname: 'logo-euro',
-  },
-   {
-    id: '1',
-    date: 'Tuesday, 17 Jun 2025',
-    price: ' £2.45',
-    title: 'GLOBAL MONEY ',
-    subtitle: 'GPCO1H4K5A',
-    amount: "20.00",
+    date: 'Wednesday, 20 Aug 2025',
+    price: ' £0.05',
+    title: '401672 38025703 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:  "80.00",
     type: 'debit',
     iconname: 'person',
   },
    {
      id: '1',
     price: ' £6.00',
-    title: 'WESTEX SERVICES LT',
+    title: 'A Sing',
     // subtitle: 'WESTFIELDS',
-    amount:  "20.00",
-     subtitle: 'pay',
+    amount:  "80.00",
+   
     type: 'credit',
+    iconname: 'logo-euro',
+  },
+    {
+     id: '1',
+    price: ' £6.00',
+    title: 'Akashdeep Singh',
+    subtitle: 'Gufseak',
+    amount:  "1.00",
+   
+    type: 'debit',
+      iconname: 'arrow-up-circle-outline',
+  },
+   {
+    id: '1',
+    title: '401672 38025703 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:  "1.00",
+    type: 'debit',
+    iconname: 'person',
+  },
+   {
+    id: '1',
+    date: 'Thursday, 14 Aug 2025',
+    price: ' £0.05',
+    title: 'nirmal singh',
+    subtitle: 'gift',
+    amount: "5.00",
+    type: 'debit',
+    iconname: 'arrow-up-circle-outline',
+  },
+   {
+     id: '1',
+    price: ' £6.00',
+    title: 'C Kaur',
+    // subtitle: 'Gufseak',
+    amount:  "1.00",
+   
+    type: 'credit',
+       iconname: 'logo-euro',
+  },
+  
+   {
+    id: '1',
+    date: 'Friday, 18 July 2025',
+    price: ' £0.05',
+    title: '401672 38025703 ',
+    subtitle: 'INTERNET TRANSFER',
+    amount:  "64.00",
+    type: 'debit',
+    iconname: 'person',
+  },
+   {
+     id: '1',
+    price: ' £6.00',
+    title: 'Biedar BAXHIJA',
+    // subtitle: 'WESTFIELDS',
+    amount:  "15.00",
+     subtitle: 'car wash',
+    type: 'debit',
     iconname: 'logo-euro',
   },
   
-    {
-    id: '1',
-    date: 'Thursday, 22 May 2025',
-    price: ' £2.45',
-    title: 'Zettle... *Westex ser ',
-    subtitle: 'Hayes',
-    amount:  "6.00",
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
+  //   {
+  //   id: '1',
+  //   date: 'Thursday, 22 May 2025',
+  //   price: ' £2.45',
+  //   title: 'Zettle... *Westex ser ',
+  //   subtitle: 'Hayes',
+  //   amount:  "6.00",
+  //   type: 'debit',
+  //   iconname: 'arrow-up-circle-outline',
+  // },
 
-    {
-    id: '1',
-    date: 'Wednesday, 21 May 2025',
-    price: ' £8.45',
-   title: '401672 53867641 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount:" 4.00",
-    type: 'credit',
-    iconname: 'person',
-  },
-    {
-    id: '1',
-    date: 'Monday, 19 May 2025',
-    price: ' £4.45',
-   title: '401672 53867641 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount:" 3.00",
-    type: 'credit',
-    iconname: 'person',
-  },
-   {
-    id: '1',
-    date: 'Friday, 16 May 2025',
-    price: ' £1.45',
-   title: 'Paramjit singh vid ',
-    subtitle: 'O',
-    amount:" 1.00",
-    type: 'debit',
-    iconname: 'arrow-up-circle-outline',
-  },
-   {
-    id: '1',
-    date: 'Thursday, 15 May 2025',
-    price: ' £2.45',
-   title: '401672 53867641 ',
-    subtitle: 'INTERNET TRANSFER',
-    amount:" 118.00",
-    type: 'debit',
-    iconname: 'person',
-  },
+  //   {
+  //   id: '1',
+  //   date: 'Wednesday, 21 May 2025',
+  //   price: ' £8.45',
+  //  title: '401672 53867641 ',
+  //   subtitle: 'INTERNET TRANSFER',
+  //   amount:" 4.00",
+  //   type: 'credit',
+  //   iconname: 'person',
+  // },
+  //   {
+  //   id: '1',
+  //   date: 'Monday, 19 May 2025',
+  //   price: ' £4.45',
+  //  title: '401672 53867641 ',
+  //   subtitle: 'INTERNET TRANSFER',
+  //   amount:" 3.00",
+  //   type: 'credit',
+  //   iconname: 'person',
+  // },
+  //  {
+  //   id: '1',
+  //   date: 'Friday, 16 May 2025',
+  //   price: ' £1.45',
+  //  title: 'Paramjit singh vid ',
+  //   subtitle: 'O',
+  //   amount:" 1.00",
+  //   type: 'debit',
+  //   iconname: 'arrow-up-circle-outline',
+  // },
+  //  {
+  //   id: '1',
+  //   date: 'Thursday, 15 May 2025',
+  //   price: ' £2.45',
+  //  title: '401672 53867641 ',
+  //   subtitle: 'INTERNET TRANSFER',
+  //   amount:" 118.00",
+  //   type: 'debit',
+  //   iconname: 'person',
+  // },
    
   // {
   //   id: '1',
@@ -201,7 +230,8 @@ const TransactionItem = ({ item }: any) => (
       style={{
         flexDirection: 'row',
         justifyContent:'space-between',
-        alignItems:'center'
+        alignItems:'center',
+        marginVertical:10
         
       }}>
         <View style={{flexDirection:'row',}}>
@@ -211,17 +241,21 @@ const TransactionItem = ({ item }: any) => (
       </View>
       <View style={{ width: '65%',justifyContent:'center' }}>
         <Text style={styles.title}>{item.title}</Text>
+        {item?.subtitle &&
+        
         <Text style={styles.subtitle}>{item.subtitle}</Text>
-      </View>
-        </View>
-
-      <Text
+        }
+         <Text
         style={[
           styles.amount,
           { color: item.type === 'credit' ? '#007e33' : '#000' },
         ]}>
-        {item.type === 'credit' ? '+' : '-'}£{item?.amount}
+        {item.type === 'credit' ? '+'   : '-'} £{item?.amount}
       </Text>
+      </View>
+        </View>
+
+     
     </View>
 
     {/* <View>
@@ -256,21 +290,33 @@ export default function AccountScreen({ navigation }: any) {
   
       <View
         style={{
-          justifyContent: 'space-between',
-          flexDirection: 'row',
           marginHorizontal: 10,
-          alignItems: 'center',
           borderBottomWidth: 1,
           paddingVertical: 20,
           borderColor:'#D3D3D3'
         }}>
-        <Text style={{ color: Black, fontSize: 14,marginTop:30,marginLeft:20 }}>Arranged overdraft</Text>
+            <View>
         <View>
+                 <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+                   BANK A/C
+                 </Text>
+               </View>
+               <View>
+               
+                 <Text style={{ color: Black, marginHorizontal: 10 }}>
+                   40-16-64 10261300{' '}
+                 </Text>
+               </View>
+            </View>
+             <View>
+                  
+        <Text style={{ color: Black, fontSize: 14,marginTop:30,marginHorizontal: 10, }}>Arranged overdraft</Text>
+        <View style={{alignSelf:"flex-end",bottom:40}}>
           <Text style={{ color: Black, fontSize: 22, fontWeight: '500' }}>
             <Text style={{ color: Black, fontSize: 18, fontWeight: '500'}}>£ </Text>
-            2.
+            0.
             <Text style={{ color: Black, fontSize: 15, fontWeight: '500' }}>
-              45
+              05
             </Text>
           </Text>
           <Text style={{ color: Black, fontSize: 17, fontWeight: '500' }}>
@@ -280,6 +326,7 @@ export default function AccountScreen({ navigation }: any) {
             </Text>
           </Text>
         </View>
+                </View>
       </View>
 
       
@@ -385,7 +432,7 @@ const styles = StyleSheet.create({
   itemContainer: {},
   title: { fontSize: 14, fontWeight: '600', color: '#222', marginLeft: 10 },
   subtitle: { fontSize: 13, color: '#777', marginLeft: 10 },
-  amount: { fontSize: 16, fontWeight: '600', },
+  amount: { fontSize: 13, fontWeight: '600',marginLeft:10 },
   viewMore: {
     color: '#000',
     fontSize: 13,
