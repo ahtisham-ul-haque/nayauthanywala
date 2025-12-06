@@ -321,6 +321,371 @@ const FullScreenImage = ({ navigation }: any) => {
         }
 
       </View>
+        <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 28800545{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
+           <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+          marginVertical:10
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 28800669{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
+          <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+          marginVertical:10
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 28800677{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
+           <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+          marginVertical:10
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 38800618{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
+        <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+          marginVertical:10
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 38800642{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
+       <TouchableOpacity
+        // onPress={() => navigation.navigate('AccountInformations')}
+        style={{
+          paddingVertical: 10,
+          marginHorizontal: 15,
+          backgroundColor: White,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+          marginVertical:10
+        }}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+          <View
+            style={{
+              height: 20,
+              width: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft: 4,
+            }}>
+            <Image
+              source={require('../../assets/images/uk.png')}
+              style={{ height: '100%', width: '130%', marginLeft: 5 }}
+            />
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ marginRight: 10 }}>
+              <Icon name="star-outline" size={18} color={Black} />
+            </View>
+            <View style={{}}>
+              <Icon name="ellipsis-vertical" size={18} color={Black} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10, fontSize: 16 }}>
+            Flex Sever 
+          </Text>
+        </View>
+        <View>
+          <Text style={{ color: Black, marginHorizontal: 10 }}>
+            40-16-64 38800561{' '}
+          </Text>
+        </View>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            color: Black,
+            marginHorizontal: 10,
+            fontSize: 19,
+          }}>
+            <Text style={{fontSize:15}}>£</Text>
+          0.00
+        </Text>
+      </TouchableOpacity>
        {/* <TouchableOpacity
         style={{
           marginVertical:10,

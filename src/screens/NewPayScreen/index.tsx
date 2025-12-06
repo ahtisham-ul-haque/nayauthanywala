@@ -99,7 +99,7 @@ const PayScreen = ({navigation}:any) => {
 
 const GridItem = ({ icon, label,navigation }) => (
   <TouchableOpacity
-  onPress={() => navigation.navigate('From')}
+  onPress={() => navigation.navigate('SelectAccountScreen')}
   style={styles.gridItem}>
     <Icon name={icon} size={24} color="#d6001c" />
     <Text style={styles.gridText}>{label}</Text>

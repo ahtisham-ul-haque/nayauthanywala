@@ -33,6 +33,8 @@ import PayScreen from '../screens/NewPayScreen';
 import Gratish_British_Pound from '../screens/Great_Britsh_Pounds';
 import USD from '../screens/USD_INFORMATION';
 import BankAccountScreen from '../screens/ViewAndShare';
+import SelectAccountScreen from '../screens/New_From';
+import PayeeScreen from '../screens/Select_paye';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -240,7 +242,16 @@ const MainNavigation = () => {
           component={Pin}
           options={{ headerShown: false }}
         />
-        
+         <Stack.Screen
+          name="SelectAccountScreen"
+          component={SelectAccountScreen}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="PayeeScreen"
+          component={PayeeScreen}
+          options={{ headerShown: false }}
+        />
         
       </Stack.Navigator>
     </NavigationContainer>
